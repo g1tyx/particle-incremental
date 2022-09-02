@@ -3913,6 +3913,20 @@ const themes = [
     buttonColor: "#3DD7DE",
     borderColor: "#3DD7DE",
     themeName: "Blue"
+  },
+  {
+    textColor: "#000000",
+    bgColor: "#FFFACD",
+    buttonColor: "#FFD700",
+    borderColor: "#FFD700",
+    themeName: "Yellow"
+  },
+  {
+    textColor: "#000000",
+    bgColor: "#DEB2EF",
+    buttonColor: "#8A7AED",
+    borderColor: "#6A5ACD",
+    themeName: "Purple"
   }
 ];
 function themeExec() {
@@ -4280,4 +4294,4 @@ window.reset = function() {
   window.location.reload();
 };
 console.log(window.location.pathname);
-//# sourceMappingURL=index.929295bc.js.map
+//# sourceMappingURL=index.385fb34c.js.map
