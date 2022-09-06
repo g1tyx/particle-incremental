@@ -3590,7 +3590,7 @@ let player = {
   baTimeLeft: 0
 };
 let playerSettings = {
-  version: "b1.22.1",
+  version: "b1.22.3",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3621,10 +3621,10 @@ function loadSettings() {
     localStorage.removeItem(window.location.pathname);
     window.location.reload();
   }
-  if (playerSettings.version !== "b1.22.1") {
+  if (playerSettings.version !== "b1.22.3") {
     localStorage.removeItem(window.location.pathname);
     window.location.reload();
-    playerSettings.version = "b1.22.1";
+    playerSettings.version = "b1.22.3";
   }
   if (playerSettings.useExperimental) {
     getEl("nextfeature").style.display = "block";
@@ -4361,4 +4361,4 @@ window.reset = function() {
   window.location.reload();
 };
 console.log(window.location.pathname);
-//# sourceMappingURL=index.8d430a90.js.map
+//# sourceMappingURL=index.40b0bedf.js.map
