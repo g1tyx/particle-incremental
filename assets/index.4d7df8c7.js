@@ -3623,8 +3623,8 @@ function loadSettings() {
   }
   if (playerSettings.version !== "b1.22.3") {
     localStorage.removeItem(window.location.pathname);
-    window.location.reload();
     playerSettings.version = "b1.22.3";
+    window.location.reload();
   }
   if (playerSettings.useExperimental) {
     getEl("nextfeature").style.display = "block";
@@ -4361,4 +4361,4 @@ window.reset = function() {
   window.location.reload();
 };
 console.log(window.location.pathname);
-//# sourceMappingURL=index.40b0bedf.js.map
+//# sourceMappingURL=index.4d7df8c7.js.map
