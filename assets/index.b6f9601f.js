@@ -3453,13 +3453,13 @@ Decimal.fromMantissaExponent; // eslint-disable-next-line @typescript-eslint/no-
 Decimal.fromMantissaExponent_noNormalize;
 
 function format(n) {
-  return Math.log10(n) >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e") : n.toFixed(0);
+  return Math.log10(n) >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
 }
 function formatb(n) {
-  return n.absLog10().toNumber() >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e") : n.toFixed(0);
+  return n.absLog10().toNumber() >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
 }
 function formatbSpecific(n) {
-  return n.absLog10().toNumber() >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e") : n.toFixed(3).replace(".000", "");
+  return n.absLog10().toNumber() >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(3).replace(".000", "");
 }
 function getEl(id) {
   return document.getElementById(id);
@@ -3868,24 +3868,35 @@ window.buyTenSpeed = function() {
   }
 };
 
+function Feature(x) {
+  return x;
+}
 const features = {
-  GB: { displayName: "Generator boost", unlocksAt: D$1(5e3), currency: "", next: "Factory" },
-  Factory: { displayName: "Factory", unlocksAt: D$1(1e5), currency: "", next: "NP" },
-  NP: { displayName: "Nuclear Particles", unlocksAt: D$1(1e6), currency: "", next: "Bang" },
-  Bang: { displayName: "Bang", unlocksAt: D$1(1e9), currency: "", next: "BA" },
-  BA: { displayName: "Bang Autobuyer (in Omega tab)", unlocksAt: D$1(1e10), currency: "", next: "PCA" },
-  PCA: { displayName: "Particle Chunk Autobuyer", unlocksAt: D$1(20), currency: " Alpha", next: "NAP" },
-  NAP: { displayName: "Nuclear Alpha Particles", unlocksAt: D$1(1e6), currency: " Alpha", next: void 0 }
+  GB: Feature({ displayName: "Generator boost", unlocksAt: D$1(5e3), currency: "num", next: "Factory" }),
+  Factory: Feature({ displayName: "Factory", unlocksAt: D$1(1e5), currency: "num", next: "NP" }),
+  NP: Feature({ displayName: "Nuclear Particles", unlocksAt: D$1(1e6), currency: "num", next: "Bang" }),
+  Bang: Feature({ displayName: "Bang", unlocksAt: D$1(1e9), currency: "num", next: "BA" }),
+  BA: Feature({ displayName: "Bang Autobuyer (in Omega tab)", unlocksAt: D$1(1e10), currency: "num", next: "PCA" }),
+  PCA: Feature({ displayName: "Particle Chunk Autobuyer", unlocksAt: D$1(20), currency: "alphaNum", next: "NAP" }),
+  NAP: Feature({ displayName: "Nuclear Alpha Particles", unlocksAt: D$1(1e6), currency: "alphaNum", next: void 0 })
 };
 let goal = "GB";
 function nextFeatureHandler() {
+  if (typeof goal === "undefined") {
+    return;
+  }
   let feature = features[goal];
+  const featureCurrency = feature.currency;
   const nextGoal = feature.next;
-  const percentage = D$1(100).times(player.num.log10().div(feature.unlocksAt.log10()));
-  getEl("nextfeature").textContent = `Reach ${formatb(feature.unlocksAt)}${feature.currency} particles to unlock ${feature.displayName} (${formatbSpecific(percentage)}%)`;
-  if (player.num.gte(feature.unlocksAt)) {
+  if (!nextGoal) {
+    getEl("nextfeature").textContent = "You have unlocked all the features.";
+    goal = void 0;
+  } else if (player.num.gte(feature.unlocksAt)) {
     goal = nextGoal;
     feature = features[goal];
+  } else {
+    const percentage = D$1(100).times(player[featureCurrency].log10().div(feature.unlocksAt.log10()));
+    getEl("nextfeature").textContent = `Reach ${formatb(feature.unlocksAt)}${currencyName[feature.currency]} particles to unlock ${feature.displayName} (${formatbSpecific(percentage)}%)`;
   }
 }
 
@@ -4361,4 +4372,4 @@ window.reset = function() {
   window.location.reload();
 };
 console.log(window.location.pathname);
-//# sourceMappingURL=index.4183516c.js.map
+//# sourceMappingURL=index.b6f9601f.js.map
