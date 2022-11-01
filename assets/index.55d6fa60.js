@@ -3462,7 +3462,7 @@ const decimalPlaces = function decimalPlaces2(value, places, trunc = (x) => x) {
 };
 function formatD(d, places = 3, ePlaces = 99) {
   if (d.layer === 0) {
-    if (d.mag < 1e21 && d.mag > 1e-7 || d.mag === 0) {
+    if (d.mag < 1e4 && d.mag > 1e-7 || d.mag === 0) {
       return (d.sign * d.mag).toFixed(places);
     }
     return `${decimalPlaces(d.m, places)}e${decimalPlaces(d.e, ePlaces, Math.round)}`;
@@ -3480,10 +3480,10 @@ function format(n) {
   return Math.log10(n) >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
 }
 function formatb(n) {
-  return n.absLog10().toNumber() >= playerSettings.eSetting ? formatD(n, 2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
+  return n.absLog10().toNumber() >= 4 ? formatD(n, 2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
 }
 function formatbSpecific(n) {
-  return n.absLog10().toNumber() >= playerSettings.eSetting ? formatD(n, 2).replace("e+", "e").replace(".00", "") : n.toFixed(3).replace(".000", "");
+  return n.absLog10().toNumber() >= 4 ? formatD(n, 2).replace("e+", "e").replace(".00", "") : n.toFixed(3).replace(".000", "");
 }
 function getEl(id) {
   return document.getElementById(id);
@@ -3562,6 +3562,10 @@ function onD(is, lookup) {
 }
 const onBought = onD(isUpgradeName, (key) => getUpgradeTimesBought(key));
 const onBoughtInc = onD(isUpgradeName, (key) => getUpgradeTimesBought(key).plus(1));
+window.cheat = function() {
+  player.num = player.num.times(2);
+  player.alphaNum = player.alphaNum.plus(1).times(2);
+};
 
 function D(n) {
   return new Decimal(n);
@@ -3616,7 +3620,7 @@ let player = {
   clickerParticles: D(0)
 };
 let playerSettings = {
-  version: "b1.23.0",
+  version: "b1.23.1",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3641,11 +3645,8 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b1.23.0") {
-    localStorage.removeItem(window.location.pathname + "settings");
-    localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b1.23.0";
-    window.location.reload();
+  if (playerSettings.version !== "b1.23.1") {
+    playerSettings.version = "b1.23.1";
   }
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
@@ -4425,4 +4426,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.7addff15.js.map
+//# sourceMappingURL=index.55d6fa60.js.map
