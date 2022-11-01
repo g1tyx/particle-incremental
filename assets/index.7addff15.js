@@ -42,7 +42,7 @@ const p = function polyfill() {
     }
 };true&&p();
 
-var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n#resetb {\n  color: red\n}\n#resetb:hover {\n  color: #FF00FF\n}\n#resetb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#omegabasecost {\n  display: inline-block;\n}\n#omegaalphacost {\n  display: inline-block;\n  text-indent: 3.5em;\n}\n#omegabetacost {\n  display: inline-block;\n  text-indent: 6em;\n}\n#omegagammacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#omegadeltacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divobase {\n  display: inline-block;\n}\n#divoalpha {\n  display: inline-block;\n  text-indent: 4.5em;\n}\n#divobeta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divogamma {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divodelta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center;}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#pcabox {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#talbox {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nuclearalphashow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px;\n  padding-right: 15px; \n  border-radius: 10px\n}\n#bpsection {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#divclickerparticles {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n")();
+var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#omegabasecost {\n  display: inline-block;\n}\n#omegaalphacost {\n  display: inline-block;\n  text-indent: 3.5em;\n}\n#omegabetacost {\n  display: inline-block;\n  text-indent: 6em;\n}\n#omegagammacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#omegadeltacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divobase {\n  display: inline-block;\n}\n#divoalpha {\n  display: inline-block;\n  text-indent: 4.5em;\n}\n#divobeta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divogamma {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divodelta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center;}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#pcabox {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#talbox {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nuclearalphashow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px;\n  padding-right: 15px; \n  border-radius: 10px\n}\n#bpsection {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#divclickerparticles {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n")();
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -232,7 +232,7 @@ var NUMBER_EXP_MAX = 308; //The largest exponent that can appear in a Number, th
 
 var NUMBER_EXP_MIN = -324; //The smallest exponent that can appear in a Number, though not all mantissas are valid here.
 
-var MAX_ES_IN_A_ROW = 5; //For default toString behaviour, when to swap from eee... to (e^n) syntax.
+var MAX_ES_IN_A_ROW$1 = 5; //For default toString behaviour, when to swap from eee... to (e^n) syntax.
 
 var DEFAULT_FROM_STRING_CACHE_SIZE = (1 << 10) - 1; // The default size of the LRU cache used to cache Decimal.fromString.
 
@@ -293,7 +293,7 @@ var FC_NN = function FC_NN(sign, layer, mag) {
   return Decimal.fromComponents_noNormalize(sign, layer, mag);
 }; // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-var decimalPlaces = function decimalPlaces(value, places) {
+var decimalPlaces$1 = function decimalPlaces(value, places) {
   var len = places + 1;
   var numDigits = Math.ceil(Math.log10(Math.abs(value)));
   var rounded = Math.round(value * Math.pow(10, len - numDigits)) * Math.pow(10, numDigits - len);
@@ -1018,7 +1018,7 @@ var Decimal = /*#__PURE__*/function () {
         return 0;
       }
 
-      return decimalPlaces(this.m, places);
+      return decimalPlaces$1(this.m, places);
     }
   }, {
     key: "magnitudeWithDecimalPlaces",
@@ -1032,7 +1032,7 @@ var Decimal = /*#__PURE__*/function () {
         return 0;
       }
 
-      return decimalPlaces(this.mag, places);
+      return decimalPlaces$1(this.mag, places);
     }
   }, {
     key: "toString",
@@ -1055,7 +1055,7 @@ var Decimal = /*#__PURE__*/function () {
         return this.m + "e" + this.e;
       } else {
         //layer 2+
-        if (this.layer <= MAX_ES_IN_A_ROW) {
+        if (this.layer <= MAX_ES_IN_A_ROW$1) {
           return (this.sign === -1 ? "-" : "") + "e".repeat(this.layer) + this.mag;
         } else {
           return (this.sign === -1 ? "-" : "") + "(e^" + this.layer + ")" + this.mag;
@@ -1111,15 +1111,15 @@ var Decimal = /*#__PURE__*/function () {
           return (this.sign * this.mag).toFixed(places);
         }
 
-        return decimalPlaces(this.m, places) + "e" + decimalPlaces(this.e, places);
+        return decimalPlaces$1(this.m, places) + "e" + decimalPlaces$1(this.e, places);
       } else if (this.layer === 1) {
-        return decimalPlaces(this.m, places) + "e" + decimalPlaces(this.e, places);
+        return decimalPlaces$1(this.m, places) + "e" + decimalPlaces$1(this.e, places);
       } else {
         //layer 2+
-        if (this.layer <= MAX_ES_IN_A_ROW) {
-          return (this.sign === -1 ? "-" : "") + "e".repeat(this.layer) + decimalPlaces(this.mag, places);
+        if (this.layer <= MAX_ES_IN_A_ROW$1) {
+          return (this.sign === -1 ? "-" : "") + "e".repeat(this.layer) + decimalPlaces$1(this.mag, places);
         } else {
-          return (this.sign === -1 ? "-" : "") + "(e^" + this.layer + ")" + decimalPlaces(this.mag, places);
+          return (this.sign === -1 ? "-" : "") + "(e^" + this.layer + ")" + decimalPlaces$1(this.mag, places);
         }
       }
     }
@@ -3452,14 +3452,38 @@ Decimal.fromMantissaExponent; // eslint-disable-next-line @typescript-eslint/no-
 
 Decimal.fromMantissaExponent_noNormalize;
 
+const MAX_ES_IN_A_ROW = 5;
+const decimalPlaces = function decimalPlaces2(value, places, trunc = (x) => x) {
+  const len = places + 1;
+  const numDigits = Math.ceil(Math.log10(Math.abs(value)));
+  const rounded = Math.round(value * Math.pow(10, len - numDigits)) * Math.pow(10, numDigits - len);
+  const ret = parseFloat(rounded.toFixed(Math.max(len - numDigits, 0)));
+  return trunc(ret);
+};
+function formatD(d, places = 3, ePlaces = 99) {
+  if (d.layer === 0) {
+    if (d.mag < 1e21 && d.mag > 1e-7 || d.mag === 0) {
+      return (d.sign * d.mag).toFixed(places);
+    }
+    return `${decimalPlaces(d.m, places)}e${decimalPlaces(d.e, ePlaces, Math.round)}`;
+  } else if (d.layer === 1) {
+    return `${decimalPlaces(d.m, places)}e${decimalPlaces(d.e, ePlaces, Math.round)}`;
+  } else {
+    if (d.layer <= MAX_ES_IN_A_ROW) {
+      return (d.sign === -1 ? "-" : "") + "e".repeat(d.layer) + decimalPlaces(d.mag, ePlaces, Math.round);
+    } else {
+      return `${d.sign === -1 ? "-" : ""}(e^${d.layer})${decimalPlaces(d.mag, ePlaces, Math.round)}`;
+    }
+  }
+}
 function format(n) {
   return Math.log10(n) >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
 }
 function formatb(n) {
-  return n.absLog10().toNumber() >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
+  return n.absLog10().toNumber() >= playerSettings.eSetting ? formatD(n, 2).replace("e+", "e").replace(".00", "") : n.toFixed(0);
 }
 function formatbSpecific(n) {
-  return n.absLog10().toNumber() >= playerSettings.eSetting ? n.toExponential(2).replace("e+", "e").replace(".00", "") : n.toFixed(3).replace(".000", "");
+  return n.absLog10().toNumber() >= playerSettings.eSetting ? formatD(n, 2).replace("e+", "e").replace(".00", "") : n.toFixed(3).replace(".000", "");
 }
 function getEl(id) {
   return document.getElementById(id);
@@ -3547,7 +3571,7 @@ let player = {
     "gen": { cost: D(0), timesBought: D(0) },
     "bb": { cost: D(2e3), timesBought: D(0) },
     "speed": { cost: D(50), timesBought: D(0) },
-    "mbup": { cost: D(50), timesBought: D(0) },
+    "mbup": { cost: D(100), timesBought: D(0) },
     "mbmult": { cost: D(1e3), timesBought: D(0) },
     "unlockgb": { cost: D(5e3), timesBought: D(0) },
     "gbupt": { cost: D(100), timesBought: D(0) },
@@ -3617,17 +3641,11 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  const stage = Number(playerSettings.version.substring(1, 2));
-  const major = Number(playerSettings.version.substring(3, 5));
-  if (stage === 1 && major <= 21) {
-    localStorage.removeItem(window.location.pathname);
-    window.location.reload();
-  }
   if (playerSettings.version !== "b1.23.0") {
     localStorage.removeItem(window.location.pathname + "settings");
     localStorage.removeItem(window.location.pathname);
     playerSettings.version = "b1.23.0";
-    alert("please refresh");
+    window.location.reload();
   }
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
@@ -3657,6 +3675,13 @@ function load() {
     player = JSON.parse(localStorage.getItem(window.location.pathname), saveRevive);
   }
 }
+window.loadbackup = function() {
+  if (localStorage.getItem(window.location.pathname + "backupsave") !== null) {
+    const savefile = localStorage.getItem(window.location.pathname + "backupsave");
+    localStorage.setItem(window.location.pathname, savefile);
+    window.location.reload();
+  }
+};
 
 const currencyName = {
   num: "",
@@ -3794,7 +3819,8 @@ const upgrades = {
   upgradeba: Upgrade({
     scaleFunction: scaleBA,
     costDiv: "divupgradeba",
-    currency: "omegaBase"
+    currency: "omegaBase",
+    extra: BAExtra
   })
 };
 function scaleMultiplier(multiplier) {
@@ -3810,10 +3836,11 @@ function scaleBangSpeed(upgradeName) {
   }
 }
 function scaleSpeed(upgradeName) {
-  if (getUpgradeTimesBought(upgradeName).lt(10)) {
-    setUpgradeCost(upgradeName, D$1(50));
-  } else if (getUpgradeTimesBought(upgradeName).gte(10) && getUpgradeTimesBought(upgradeName).lte(1e3)) {
-    setUpgradeCost(upgradeName, D$1(31).times(getUpgradeTimesBought(upgradeName)).minus(110));
+  const x = getUpgradeTimesBought(upgradeName);
+  if (x.lt(10)) {
+    setUpgradeCost(upgradeName, D$1(10).times(x).plus(100));
+  } else if (x.gte(10) && x.lte(1e3)) {
+    setUpgradeCost(upgradeName, D$1(40).times(x).minus(200));
   } else {
     scaleMultiplier(D$1(1.1))(upgradeName);
   }
@@ -3853,6 +3880,13 @@ function PCAExtra() {
     player.pcaTime = Math.ceil(player.pcaTime / 2);
   } else {
     player.pcaTime = D$1(10).div(getUpgradeTimesBought("upgradepca").minus(3)).ceil().toNumber();
+  }
+}
+function BAExtra() {
+  if (getUpgradeTimesBought("upgradeba").lte(4)) {
+    player.baTime = Math.ceil(player.baTime / 2);
+  } else {
+    player.baTime = D$1(10).div(getUpgradeTimesBought("upgradeba").minus(3)).ceil().toNumber();
   }
 }
 function buyUpgrade(upgradeName) {
@@ -4004,6 +4038,10 @@ function themeExec() {
   const className2 = document.getElementsByClassName("withtheoutline");
   for (let i = 0; i < className2.length; i++) {
     className2[i].style.border = "0.2em solid " + borderColor;
+  }
+  const className3 = document.getElementsByClassName("redb");
+  for (let i = 0; i < className3.length; i++) {
+    className3[i].style.backgroundColor = buttonColor;
   }
   getEl("whattheme").textContent = "Theme: " + themeName;
 }
@@ -4174,9 +4212,6 @@ window.mbman = function() {
   player.num = player.num.plus(gain);
   getEl("counter").textContent = formatb(player.num) + " particles";
 };
-if (player.clickerParticles.gt(100)) {
-  clickerParticleMult = player.clickerParticles.div(100);
-}
 window.gbboost = function() {
   player.gbTimeLeft = player.gbTimeLeftCon;
 };
@@ -4386,7 +4421,8 @@ window.save = save;
 window.reset = function() {
   saveSettings();
   localStorage.removeItem(window.location.pathname);
+  const savefile = JSON.stringify(player, saveReplace);
+  localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-console.log(window.location.pathname);
-//# sourceMappingURL=index.d9ee4b06.js.map
+//# sourceMappingURL=index.7addff15.js.map
