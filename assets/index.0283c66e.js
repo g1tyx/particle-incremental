@@ -3564,7 +3564,6 @@ const onBought = onD(isUpgradeName, (key) => getUpgradeTimesBought(key));
 const onBoughtInc = onD(isUpgradeName, (key) => getUpgradeTimesBought(key).plus(1));
 window.cheat = function() {
   player.num = player.num.times(2);
-  player.alphaNum = player.alphaNum.plus(1).times(2);
 };
 
 function D(n) {
@@ -3573,54 +3572,55 @@ function D(n) {
 let player = {
   upgrades: {
     "gen": { cost: D(0), timesBought: D(0) },
-    "bb": { cost: D(2e3), timesBought: D(0) },
+    "biggerbatches": { cost: D(2e3), timesBought: D(0) },
     "speed": { cost: D(50), timesBought: D(0) },
     "mbup": { cost: D(100), timesBought: D(0) },
     "mbmult": { cost: D(1e3), timesBought: D(0) },
-    "unlockgb": { cost: D(5e3), timesBought: D(0) },
-    "gbupt": { cost: D(100), timesBought: D(0) },
-    "gbupm": { cost: D(1e4), timesBought: D(0) },
+    "unlockgenboost": { cost: D(5e3), timesBought: D(0) },
+    "genboostuptime": { cost: D(100), timesBought: D(0) },
+    "genboostupmult": { cost: D(1e4), timesBought: D(0) },
     "nuclearbuy": { cost: D(1e6), timesBought: D(0) },
     "speedparticle": { cost: D(5e4), timesBought: D(0) },
     "machine": { cost: D(2e4), timesBought: D(0) },
     "nuclearalphabuy": { cost: D(1e6), timesBought: D(0) },
     "alphaacc": { cost: D(1e10), timesBought: D(0) },
-    "tb": { cost: D(1), timesBought: D(0) },
+    "threeboost": { cost: D(1), timesBought: D(0) },
     "perbang": { cost: D(4), timesBought: D(0) },
     "bangspeed": { cost: D(1), timesBought: D(0) },
     "unlockpca": { cost: D(20), timesBought: D(0) },
     "upgradepca": { cost: D(2), timesBought: D(0) },
     "boosterup": { cost: D(100), timesBought: D(0) },
     "boosteruppercent": { cost: D(100), timesBought: D(0) },
-    "gboostdouble": { cost: D(1), timesBought: D(0) },
+    "genboostdouble": { cost: D(1), timesBought: D(0) },
     "alphamachinedouble": { cost: D(1e3), timesBought: D(0) },
-    "baunlock": { cost: D(1), timesBought: D(0) },
-    "upgradeba": { cost: D(1), timesBought: D(0) }
+    "bangautobuyerunlock": { cost: D(1), timesBought: D(0) },
+    "upgradebangautobuyer": { cost: D(1), timesBought: D(0) }
   },
   num: D(0),
-  gbTimeLeft: D(0),
-  gbTimeLeftCon: D(10),
-  gbMult: D(1),
+  genBoostTimeLeft: D(0),
+  genBoostTimeLeftCon: D(10),
+  genBoostMult: D(1),
   pChunks: D(0),
   alphaNum: D(0),
   bangTime: 300,
   bangTimeLeft: 1e300,
   pcaToggle: true,
   pcaTime: 160,
-  pcaTimeLeft: 0,
+  chunkAutobuyerTimeLeft: 0,
   boosterParticles: D(0),
   untilBoost: 1,
   omegaBase: D(0),
   omegaBaseCost: D(1e10),
   omegaAlpha: D(0),
   omegaAlphaCost: D(1e12),
-  baToggle: true,
-  baTime: 160,
-  baTimeLeft: 0,
-  clickerParticles: D(0)
+  bangAutobuyerToggle: true,
+  bangAutobuyerTime: 160,
+  bangAutobuyerTimeLeft: 0,
+  clickerParticles: D(0),
+  machineWear: 10
 };
 let playerSettings = {
-  version: "b1.23.1",
+  version: "b1.23.2",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3645,8 +3645,11 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b1.23.1") {
-    playerSettings.version = "b1.23.1";
+  if (playerSettings.version !== "b1.23.2") {
+    localStorage.removeItem(window.location.pathname + "settings");
+    localStorage.removeItem(window.location.pathname);
+    playerSettings.version = "b1.23.2";
+    window.location.reload();
   }
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
@@ -3701,7 +3704,7 @@ const upgrades = {
     costDiv: "divgencost",
     currency: "num"
   }),
-  bb: Upgrade({
+  biggerbatches: Upgrade({
     scaleFunction: scaleMultiplier(D$1(2)),
     costDiv: "divbbcost",
     currency: "num"
@@ -3721,18 +3724,18 @@ const upgrades = {
     costDiv: "divmbmultcost",
     currency: "num"
   }),
-  unlockgb: Upgrade({
+  unlockgenboost: Upgrade({
     scaleFunction: scaleMultiplier(D$1(Infinity)),
     costDiv: "divgenunlockcost",
     currency: "num"
   }),
-  gbupt: Upgrade({
+  genboostuptime: Upgrade({
     scaleFunction: scaleMultiplier(D$1(5)),
     costDiv: "divgbuptcost",
     currency: "num",
     extra: GBTExtra
   }),
-  gbupm: Upgrade({
+  genboostupmult: Upgrade({
     scaleFunction: scaleMultiplier(D$1(5)),
     costDiv: "divgbupmcost",
     currency: "num",
@@ -3752,14 +3755,15 @@ const upgrades = {
   machine: Upgrade({
     scaleFunction: scaleMultiplier(D$1(4)),
     costDiv: "divmachinecost",
-    currency: "num"
+    currency: "num",
+    extra: MachineExtra
   }),
   alphaacc: Upgrade({
     scaleFunction: scaleMultiplier(D$1(1e3)),
     costDiv: "divalphaacceleratorcost",
     currency: "num"
   }),
-  tb: Upgrade({
+  threeboost: Upgrade({
     scaleFunction: scaleMultiplier(D$1(4)),
     costDiv: "divthreeboostcost",
     currency: "alphaNum"
@@ -3801,7 +3805,7 @@ const upgrades = {
     currency: "alphaNum",
     extra: NABExtra
   }),
-  gboostdouble: Upgrade({
+  genboostdouble: Upgrade({
     scaleFunction: scaleMultiplier(D$1(2)),
     costDiv: "gboostdouble",
     currency: "alphaNum",
@@ -3812,12 +3816,12 @@ const upgrades = {
     costDiv: "alphamachinedouble",
     currency: "alphaNum"
   }),
-  baunlock: Upgrade({
+  bangautobuyerunlock: Upgrade({
     scaleFunction: scaleMultiplier(D$1(Infinity)),
     costDiv: "divbau",
     currency: "omegaBase"
   }),
-  upgradeba: Upgrade({
+  upgradebangautobuyer: Upgrade({
     scaleFunction: scaleBA,
     costDiv: "divupgradeba",
     currency: "omegaBase",
@@ -3857,18 +3861,21 @@ function scaleBA(upgradeName) {
   setUpgradeCost(upgradeName, getUpgradeCost(upgradeName).plus(1));
 }
 function GBTExtra() {
-  player.gbTimeLeftCon = player.gbTimeLeftCon.plus(D$1(2).pow(getUpgradeTimesBought("gboostdouble")).times(20));
-  player.gbTimeLeft = new Decimal(0);
-  player.gbTimeLeft = player.gbTimeLeftCon;
+  player.genBoostTimeLeftCon = player.genBoostTimeLeftCon.plus(D$1(2).pow(getUpgradeTimesBought("genboostdouble")).times(20));
+  player.genBoostTimeLeft = new Decimal(0);
+  player.genBoostTimeLeft = player.genBoostTimeLeftCon;
 }
 function GBMExtra() {
-  player.gbTimeLeft = new Decimal(0);
-  player.gbTimeLeft = player.gbTimeLeftCon;
+  player.genBoostTimeLeft = new Decimal(0);
+  player.genBoostTimeLeft = player.genBoostTimeLeftCon;
 }
 function GBDExtra() {
-  player.gbTimeLeftCon = player.gbTimeLeftCon.times(2);
-  player.gbTimeLeft = new Decimal(0);
-  player.gbTimeLeft = player.gbTimeLeftCon;
+  player.genBoostTimeLeftCon = player.genBoostTimeLeftCon.times(2);
+  player.genBoostTimeLeft = new Decimal(0);
+  player.genBoostTimeLeft = player.genBoostTimeLeftCon;
+}
+function MachineExtra() {
+  player.machineWear = 10;
 }
 function NBExtra() {
   getEl("divnp").textContent = "Nuclear Particles: " + formatb(getUpgradeTimesBought("nuclearbuy"));
@@ -3884,10 +3891,10 @@ function PCAExtra() {
   }
 }
 function BAExtra() {
-  if (getUpgradeTimesBought("upgradeba").lte(4)) {
-    player.baTime = Math.ceil(player.baTime / 2);
+  if (getUpgradeTimesBought("upgradebangautobuyer").lte(4)) {
+    player.bangAutobuyerTime = Math.ceil(player.bangAutobuyerTime / 2);
   } else {
-    player.baTime = D$1(10).div(getUpgradeTimesBought("upgradeba").minus(3)).ceil().toNumber();
+    player.bangAutobuyerTime = D$1(10).div(getUpgradeTimesBought("upgradebangautobuyer").minus(3)).ceil().toNumber();
   }
 }
 function buyUpgrade(upgradeName) {
@@ -3913,6 +3920,12 @@ window.buyFiftySpeed = function() {
     }
   }
 };
+
+function createAchievementHTML() {
+  const newDiv = document.createElement("div");
+  newDiv.innerText = "stuff";
+  getEl("achievementContainer").appendChild(newDiv);
+}
 
 function Feature(x) {
   return x;
@@ -3947,12 +3960,6 @@ function nextFeatureHandler() {
     }
     getEl("nextfeature").textContent = `Reach ${formatb(feature.unlocksAt)}${currencyName[feature.currency]} particles to unlock ${feature.displayName} (${formatbSpecific(percentage)}%)`.replace("(e^NaN)NaN", "0");
   }
-}
-
-function createAchievementHTML() {
-  const newDiv = document.createElement("div");
-  newDiv.innerText = "stuff";
-  getEl("achievementContainer").appendChild(newDiv);
 }
 
 loadSettings();
@@ -4106,7 +4113,7 @@ function loadMisc() {
   } else {
     UpdateCostVal("divgencost", getUpgradeCost("gen"));
   }
-  if (getUpgradeTimesBought("unlockgb").eq(1)) {
+  if (getUpgradeTimesBought("unlockgenboost").eq(1)) {
     getEl("gbshow").style.display = "block";
     getEl("divgenunlockcost").style.display = "none";
     getEl("gbunlockbutton").style.display = "none";
@@ -4118,7 +4125,7 @@ function loadMisc() {
     getEl("pcashow").style.display = "block";
     getEl("divunlockpca").style.display = "none";
     getEl("divunlockpcabutton").style.display = "none";
-    getEl("untilpca").textContent = format(player.pcaTimeLeft) + " left until next autobuy";
+    getEl("untilpca").textContent = format(player.chunkAutobuyerTimeLeft) + " left until next autobuy";
     getEl("divtogglepca").style.display = "inline-block";
     if (player.pcaToggle) {
       getEl("divtogglepca").textContent = "On";
@@ -4126,14 +4133,14 @@ function loadMisc() {
       getEl("divtogglepca").textContent = "Off";
     }
   }
-  if (getUpgradeTimesBought("baunlock").eq(1)) {
+  if (getUpgradeTimesBought("bangautobuyerunlock").eq(1)) {
     getEl("bashow").style.display = "block";
     getEl("divbau").style.display = "none";
     getEl("divbauextra").style.display = "none";
     getEl("baunlockbutton").style.display = "none";
-    getEl("untilba").textContent = format(player.baTimeLeft) + " left until next autobuy";
+    getEl("untilba").textContent = format(player.bangAutobuyerTimeLeft) + " left until next autobuy";
     getEl("divtoggleba").style.display = "inline-block";
-    if (player.baToggle) {
+    if (player.bangAutobuyerToggle) {
       getEl("divtoggleba").textContent = "On";
     } else {
       getEl("divtoggleba").textContent = "Off";
@@ -4207,14 +4214,15 @@ window.experimentalToggle = function() {
   getEl("experimentoggle").textContent = playerSettings.useExperimental.toString();
 };
 createAchievementHTML();
-let clickerParticleMult = player.clickerParticles.div(100).plus(1);
+let machineProd = 10;
+let clickerParticleMult = player.clickerParticles.div(100).plus(1).times(machineProd);
 window.mbman = function() {
   const gain = onBoughtInc("mbup", "*", "mbmult", "*", "nuclearbuy").times(clickerParticleMult);
   player.num = player.num.plus(gain);
   getEl("counter").textContent = formatb(player.num) + " particles";
 };
 window.gbboost = function() {
-  player.gbTimeLeft = player.gbTimeLeftCon;
+  player.genBoostTimeLeft = player.genBoostTimeLeftCon;
 };
 function makechunk() {
   if (player.num.gte(1e9)) {
@@ -4271,10 +4279,10 @@ window.buyomegagamma = function() {
 window.buyomegadelta = function() {
 };
 window.toggleba = function() {
-  if (getUpgradeTimesBought("baunlock").eq(1)) {
-    player.baToggle = !player.baToggle;
+  if (getUpgradeTimesBought("bangautobuyerunlock").eq(1)) {
+    player.bangAutobuyerToggle = !player.bangAutobuyerToggle;
     getEl("divtoggleba").style.display = "inline-block";
-    if (player.baToggle) {
+    if (player.bangAutobuyerToggle) {
       getEl("divtoggleba").textContent = "On";
     } else {
       getEl("divtoggleba").textContent = "Off";
@@ -4286,12 +4294,12 @@ function fgbtest() {
     getEl("boostsection").style.display = "flex";
     getEl("bigboosttext").style.display = "block";
     getEl("veryouterboost").style.display = "block";
-    if (player.gbTimeLeft.greaterThan(0)) {
-      player.gbMult = getUpgradeTimesBought("gbupm").times(5).plus(5);
+    if (player.genBoostTimeLeft.greaterThan(0)) {
+      player.genBoostMult = getUpgradeTimesBought("genboostupmult").times(5).plus(5);
     } else {
-      player.gbMult = D$1(1);
+      player.genBoostMult = D$1(1);
     }
-    if (getUpgradeTimesBought("unlockgb").eq(1)) {
+    if (getUpgradeTimesBought("unlockgenboost").eq(1)) {
       getEl("gbshow").style.display = "block";
       getEl("divgenunlockcost").style.display = "none";
       getEl("gbunlockbutton").style.display = "none";
@@ -4302,8 +4310,12 @@ function fgbtest() {
       player.alphaNum = player.alphaNum.plus(alphaGain);
       getEl("bangtimeleft").textContent = "";
     }
-    const gain = onBought(["bb", "+", D$1(1)], "*", "gen", "*", ["speed", "/", D$1(10), "+", D$1(0.1)], "*", player.gbMult, "*", [["nuclearbuy", "+", D$1(1)], "^", D$1(2)], "*", [D$1(3), "^", "tb"], "*", [D$1(1), "+", [[player.boosterParticles, "+", D$1(1)], "/", D$1(100), "*", [["boosteruppercent", "+", D$1(1)], "/", D$1(100)]]]);
+    if (getUpgradeTimesBought("machine").gte(1)) {
+      machineProd = 9 / Math.log10(player.machineWear) + 1;
+      player.machineWear += 1;
+    }
     clickerParticleMult = player.clickerParticles.div(100).plus(1);
+    const gain = onBought(["biggerbatches", "+", D$1(1)], "*", "gen", "*", ["speed", "/", D$1(10), "+", D$1(0.1)], "*", player.genBoostMult, "*", [["nuclearbuy", "+", D$1(1)], "^", D$1(2)], "*", [D$1(3), "^", "threeboost"], "*", [D$1(1), "+", [[player.boosterParticles, "+", D$1(1)], "/", D$1(100), "*", [["boosteruppercent", "+", D$1(1)], "/", D$1(100)]]]);
     getEl("particlesperclick").textContent = "You are getting " + formatb(onBought(["mbup", "+", D$1(1)], "*", ["mbmult", "+", D$1(1)], "*", ["nuclearbuy", "+", D$1(1)]).times(clickerParticleMult)) + " particles per click";
     getEl("alphapb").textContent = "You are getting " + formatb(alphaGain) + " Alpha/bang";
     getEl("bangtimeconst").textContent = "Currently, bangs take " + format(player.bangTime / 10) + " seconds.";
@@ -4314,10 +4326,10 @@ function fgbtest() {
     } else {
       getEl("bangbutton").style.display = "block";
     }
-    if (player.gbTimeLeft.greaterThan(0)) {
-      player.gbTimeLeft = player.gbTimeLeft.minus(1);
+    if (player.genBoostTimeLeft.greaterThan(0)) {
+      player.genBoostTimeLeft = player.genBoostTimeLeft.minus(1);
     }
-    getEl("divgbtl").textContent = "Boost Time Left: " + formatb(player.gbTimeLeft.div(10));
+    getEl("divgbtl").textContent = "Boost Time Left: " + formatb(player.genBoostTimeLeft.div(10));
     const totalGain = player.alphaNum.times(getUpgradeTimesBought("boosterup").plus(1)).times(D$1(2)).div(10);
     player.boosterParticles = player.boosterParticles.plus(totalGain);
     const percentBoostDisplay = player.boosterParticles.times(getUpgradeTimesBought("boosteruppercent").plus(1).div(100));
@@ -4329,7 +4341,7 @@ function fgbtest() {
                resulting in a ${formatbSpecific(percentBoostDisplay.div(100).plus(1))}x boost to base particle production`;
     }
     getEl("bpamount").textContent = "You have " + formatb(player.boosterParticles) + " booster particles";
-    const clickerParticleGain = onBought([["machine", "*", [D$1(1.5), "^", "speedparticle"]], "/", D$1(10)]);
+    const clickerParticleGain = onBought([["machine", "*", [D$1(1.5), "^", "speedparticle"]], "/", D$1(10)]).times(machineProd);
     player.clickerParticles = player.clickerParticles.plus(clickerParticleGain);
     nextFeatureHandler();
     getEl("omegabasecost").textContent = "Cost: " + formatb(player.omegaBaseCost);
@@ -4361,28 +4373,28 @@ function pcatest() {
     getEl("divunlockpca").style.display = "none";
     getEl("divunlockpcabutton").style.display = "none";
     if (player.pcaToggle === true) {
-      if (player.pcaTimeLeft === 0) {
-        player.pcaTimeLeft = player.pcaTime;
+      if (player.chunkAutobuyerTimeLeft === 0) {
+        player.chunkAutobuyerTimeLeft = player.pcaTime;
         makechunk();
       }
-      player.pcaTimeLeft -= 1;
-      getEl("untilpca").textContent = format(player.pcaTimeLeft / 10) + " left until next autobuy";
+      player.chunkAutobuyerTimeLeft -= 1;
+      getEl("untilpca").textContent = format(player.chunkAutobuyerTimeLeft / 10) + " left until next autobuy";
     }
   }
 }
 function batest() {
-  if (getUpgradeTimesBought("baunlock").eq(1)) {
+  if (getUpgradeTimesBought("bangautobuyerunlock").eq(1)) {
     getEl("bashow").style.display = "block";
     getEl("divbau").style.display = "none";
     getEl("divbauextra").style.display = "none";
     getEl("baunlockbutton").style.display = "none";
-    if (player.baToggle === true) {
-      if (player.baTimeLeft === 0) {
-        player.baTimeLeft = player.baTime;
+    if (player.bangAutobuyerToggle === true) {
+      if (player.bangAutobuyerTimeLeft === 0) {
+        player.bangAutobuyerTimeLeft = player.bangAutobuyerTime;
         bang();
       }
-      player.baTimeLeft -= 1;
-      getEl("untilba").textContent = format(player.baTimeLeft) + " left until next autobuy";
+      player.bangAutobuyerTimeLeft -= 1;
+      getEl("untilba").textContent = format(player.bangAutobuyerTimeLeft) + " left until next autobuy";
     }
   }
 }
@@ -4426,4 +4438,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.55d6fa60.js.map
+//# sourceMappingURL=index.0283c66e.js.map

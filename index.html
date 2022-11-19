@@ -8,7 +8,7 @@
 
     
 
-    <script type="module" crossorigin src="/Particle-Incremental/assets/index.55d6fa60.js"></script>
+    <script type="module" crossorigin src="/Particle-Incremental/assets/index.0283c66e.js"></script>
     <link rel="stylesheet" href="/Particle-Incremental/assets/index.b2be7336.css">
   </head>
 
@@ -38,7 +38,7 @@
         <br>
         <div class="btn-group">
           <button onclick="buyUpgrade('gen')" class="button">Buy generator</button>
-          <button onclick="buyUpgrade('bb')" class="button">Bigger batches</button>
+          <button onclick="buyUpgrade('biggerbatches')" class="button">Bigger batches</button>
           <button onclick="buyUpgrade('speed')" class="button">Speed</button>
           <button onclick="buyFiftySpeed()" class="button">Buy up to 50 Speed</button>
 <!--           <button onclick="cheat()" class="button">cheatbutton(fortesting)</button> -->
@@ -66,13 +66,13 @@
             <br>
             <div id="genboostsection">
               <h3>Generator boost</h3>
-              <button id="gbunlockbutton" onclick="buyUpgrade('unlockgb')" class="button">Unlock generator boost</button>
+              <button id="gbunlockbutton" onclick="buyUpgrade('unlockgenboost')" class="button">Unlock generator boost</button>
               <div id="divgenunlockcost">Cost: 5000</div>
               <div id="gbshow" style="display:none">
                 <div class="btn-group">
                   <button onclick="gbboost()" class="button">Generator Boost</button>
-                  <button onclick="buyUpgrade('gbupt')" class="button">Generator Boost +2s</button>
-                  <button onclick="buyUpgrade('gbupm')" class="button">Generator Boost +5x boost</button>
+                  <button onclick="buyUpgrade('genboostuptime')" class="button">Generator Boost +2s</button>
+                  <button onclick="buyUpgrade('genboostupmult')" class="button">Generator Boost +5x boost</button>
                 </div>
                 <div id="divgenboost"></div>
                 <div id="divgbuptcost">Cost: 50</div>
@@ -143,7 +143,7 @@
         <div id="alphapb">You are getting 1 alpha/bang</div>
         <br>
         <div class="btn-group">
-          <button onclick="buyUpgrade('tb')" class="button">3x boost to base (multiplicative)</button>
+          <button onclick="buyUpgrade('threeboost')" class="button">3x boost to base (multiplicative)</button>
           <button onclick="buyUpgrade('perbang')" class="button">+1 Alpha per bang</button>
         </div>
         <div id="divthreeboostcost">Cost: 1 Alpha</div>
@@ -175,7 +175,7 @@
           <div id="talbox" class="withtheoutline">
             <h2>TAL Machine</h2>
             <div class="btn-group">
-              <button onclick="buyUpgrade('gboostdouble')" class="button">Double Generator Boost Length</button>
+              <button onclick="buyUpgrade('genboostdouble')" class="button">Double Generator Boost Length</button>
               <button onclick="buyUpgrade('alphamachinedouble')" class="button">Double Alpha Gain</button>
             </div>
             <div id="gboostdouble">Cost: 1 Alpha</div>
@@ -249,14 +249,14 @@
         <button onclick="openTab('oOmega')" class="button" style="display:none">Omega</button>
         <div id="oBase" style="display:block">
           <br>
-          <button id="baunlockbutton" onclick="buyUpgrade('baunlock')" class="button">Unlock bang autobuyer</button>
+          <button id="baunlockbutton" onclick="buyUpgrade('bangautobuyerunlock')" class="button">Unlock bang autobuyer</button>
           <div id="divbauextra">
             <span id="divbau">Cost: 1</span> Ω
             <sub>B</sub>
           </div>
           <div id="bashow" style="display:none">
             <div class="btn-group">
-              <button onclick="buyUpgrade('upgradeba')" class="button">Make bang autobuyer faster</button>
+              <button onclick="buyUpgrade('upgradebangautobuyer')" class="button">Make bang autobuyer faster</button>
               <button onclick="toggleba()" class="button">Toggle bang autobuyer</button>
             </div>
             <span id="divupgradeba">Cost: 1</span> Ω
@@ -304,7 +304,7 @@
 
       <div id="Settings" style="display:none">
         <br>
-        <button onclick="reset()"  class="button, redb">RESET SAVE</button>
+        <button onclick="reset()" class="button, redb">RESET SAVE</button>
         <button onclick="loadbackup()" class="button, redb">load backup (if one exists)</button>
         <br>
         <br>
@@ -337,11 +337,11 @@
         <a href="https://github.com/typeholes">qhwood</a>
         for improving my code and helping me code.
         <br><br>
-        Version b1.23.1
+        Version b1.23.2
         <br>
         Changelog:
         <br>
-        Formatting bugfix, notation settings temporarily removed, will be reworked soon.
+        Serious bugfix, code readability improvement, factory changes.
       </div>
       <div id="Tutorial" style="display:none">
         A generator gives you n particles every loop. Default is 1 loop per second and 1 particle per loop. <br>
