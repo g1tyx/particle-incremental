@@ -8,8 +8,8 @@
 
     
 
-    <script type="module" crossorigin src="/Particle-Incremental/assets/index.0283c66e.js"></script>
-    <link rel="stylesheet" href="/Particle-Incremental/assets/index.b2be7336.css">
+    <script type="module" crossorigin src="/Particle-Incremental-Canary/assets/index.e78ccaaf.js"></script>
+    <link rel="stylesheet" href="/Particle-Incremental-Canary/assets/index.a65e367c.css">
   </head>
 
   <body>
@@ -37,11 +37,11 @@
       <div id="Base">
         <br>
         <div class="btn-group">
-          <button onclick="buyUpgrade('gen')" class="button">Buy generator</button>
+          <button onclick="buyUpgrade('gen')" class="button" id="divgenbutton">Buy generator</button>
           <button onclick="buyUpgrade('biggerbatches')" class="button">Bigger batches</button>
           <button onclick="buyUpgrade('speed')" class="button">Speed</button>
           <button onclick="buyFiftySpeed()" class="button">Buy up to 50 Speed</button>
-<!--           <button onclick="cheat()" class="button">cheatbutton(fortesting)</button> -->
+          <button onclick="cheat()" class="button">cheatbutton(fortesting)</button>
         </div>
         <div id="divgencost">Cost: Free</div>
         <div id="divbbcost">Cost: 2000</div>
@@ -209,9 +209,35 @@
           
         </div>
         <br>
+
+        <div id="mergeshow" class="withtheoutline">
+          <h2>Merge!</h2>
+          Using a beta accelerator, you can merge two alpha groups together to make beta particles
+          <br>
+          <br>
+          <div class="btn-group">
+            <button onclick="buyUpgrade('betaacc')" class="button">Buy Beta Accelerator</button>
+            <button onclick="makegroup()" class="button">Make Alpha Group</button>
+          </div>
+          <div id="divbetaacceleratorcost">Cost: 1e12</div>
+          <div id="gcosttext">Cost: 1e9</div>
+          <br>
+          <br>
+          <div id="mergecenteringfix">
+            <button id="mergebutton" onclick="merge()" class="button">MERGE!</button>
+          </div>
+          <div>Cost: 2 Alpha Groups</div>
+          <div id="groupamount">Alpha Groups: 0</div>
+          <div id="mergetimeleft"></div>
+          <div id="mergetimeconst">Currently, merges take 30 seconds.</div>
+        </div>
       </div>
 
-      <div id="Beta" style="display:none">nothing here yet</div>
+      <div id="Beta" style="display:none">
+        <div id="betacounter">0 Beta particles</div>
+        <div id="betapb">You are getting 1 beta/merge</div>
+      </div>
+
       <div id="Gamma" style="display:none">nothing here yet</div>
       <div id="Delta" style="display:none">nothing here yet</div>
 
@@ -337,11 +363,11 @@
         <a href="https://github.com/typeholes">qhwood</a>
         for improving my code and helping me code.
         <br><br>
-        Version b1.23.2
+        Version b2.0.0.0 (alpha11)
         <br>
         Changelog:
         <br>
-        Serious bugfix, code readability improvement, factory changes.
+        Beta tab
       </div>
       <div id="Tutorial" style="display:none">
         A generator gives you n particles every loop. Default is 1 loop per second and 1 particle per loop. <br>
