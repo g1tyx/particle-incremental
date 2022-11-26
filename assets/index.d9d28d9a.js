@@ -3651,7 +3651,7 @@ let player = {
   mergeTimeLeft: 1e300
 };
 let playerSettings = {
-  version: "b2.0.0.0",
+  version: "b2.0.0.0a12",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -4531,4 +4531,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.4a1bfe84.js.map
+//# sourceMappingURL=index.d9d28d9a.js.map
