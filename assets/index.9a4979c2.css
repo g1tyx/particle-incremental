@@ -297,14 +297,18 @@ body {
 #autosaving {
   display:inline-block;
 }
-#experimentoggle {
-  display:inline-block;
-  text-indent: 10em;
-}
 #divspeedparticlecost {
   display: inline-block;
 }
 #divmachinecost {
   display: inline-block;
   text-indent: 2em;
+}
+#experimentoggle {
+  display:inline-block;
+  text-indent: 1em;
+}
+#devtoggle {
+  display:inline-block;
+  text-indent: 10em;
 }
