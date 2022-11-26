@@ -3678,10 +3678,10 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b2.0.0.0") {
+  if (playerSettings.version !== "b2.0.0.0a12") {
     localStorage.removeItem(window.location.pathname + "settings");
     localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b2.0.0.0";
+    playerSettings.version = "b2.0.0.0a12";
     window.location.reload();
   }
   if (playerSettings.useExperimental) {
@@ -4531,4 +4531,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.32a51966.js.map
+//# sourceMappingURL=index.4a1bfe84.js.map
