@@ -42,7 +42,7 @@ const p = function polyfill() {
     }
 };true&&p();
 
-var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#betacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divbetaacceleratorcost {\n  display: inline-block;\n}\n#gcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#omegabasecost {\n  display: inline-block;\n}\n#omegaalphacost {\n  display: inline-block;\n  text-indent: 3.5em;\n}\n#omegabetacost {\n  display: inline-block;\n  text-indent: 6em;\n}\n#omegagammacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#omegadeltacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divobase {\n  display: inline-block;\n}\n#divoalpha {\n  display: inline-block;\n  text-indent: 4.5em;\n}\n#divobeta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divogamma {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divodelta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center;}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#mergecenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#mergeshow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#pcabox {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#talbox {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nuclearalphashow {\n  display:none; \n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px;\n  padding-right: 15px; \n  border-radius: 10px\n}\n#bpsection {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#divclickerparticles {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 1em;\n}\n#devtoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n")();
+var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#betacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divbetaacceleratorcost {\n  display: inline-block;\n}\n#gcosttext {\n  display: inline-block;\n  text-indent: 2.3em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#omegabasecost {\n  display: inline-block;\n}\n#omegaalphacost {\n  display: inline-block;\n  text-indent: 3.5em;\n}\n#omegabetacost {\n  display: inline-block;\n  text-indent: 6em;\n}\n#omegagammacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#omegadeltacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divobase {\n  display: inline-block;\n}\n#divoalpha {\n  display: inline-block;\n  text-indent: 4.5em;\n}\n#divobeta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divogamma {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divodelta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center;}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#mergecenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n}\n#mergeshow {\n  display:none; \n}\n#nuclearalphashow {\n  display:none; \n}\n.withtheoutline {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 1em;\n}\n#devtoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divmergespeedcost {\n  display:inline-block;\n}\n#divpermergecost {\n  display:inline-block;\n  text-indent: 3em;\n}\n")();
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -3563,7 +3563,7 @@ function onD(is, lookup) {
 const onBought = onD(isUpgradeName, (key) => getUpgradeTimesBought(key));
 const onBoughtInc = onD(isUpgradeName, (key) => getUpgradeTimesBought(key).plus(1));
 window.changeCheatMode = function() {
-  if (playerSettings.cheatMode !== 4) {
+  if (playerSettings.cheatMode !== 5) {
     playerSettings.cheatMode += 1;
   } else {
     playerSettings.cheatMode = 0;
@@ -3588,7 +3588,16 @@ window.cheat = function() {
     case 4:
       player.num = player.num.times(2);
       player.alphaNum = player.alphaNum.plus(1).times(2);
+      break;
+    case 5:
+      player.betaNum = player.betaNum.plus(1).times(2);
+      break;
   }
+};
+window.opsave = function() {
+  const savefile = `{"upgrades":{"gen":{"cost":"D#1000","timesBought":"D#1"},"biggerbatches":{"cost":"D#2000","timesBought":"D#0"},"speed":{"cost":"D#50","timesBought":"D#0"},"mbup":{"cost":"D#100","timesBought":"D#0"},"mbmult":{"cost":"D#1000","timesBought":"D#0"},"unlockgenboost":{"cost":"D#5000","timesBought":"D#0"},"genboostuptime":{"cost":"D#100","timesBought":"D#0"},"genboostupmult":{"cost":"D#10000","timesBought":"D#0"},"nuclearbuy":{"cost":"D#1000000","timesBought":"D#0"},"speedparticle":{"cost":"D#50000","timesBought":"D#0"},"machine":{"cost":"D#20000","timesBought":"D#0"},"nuclearalphabuy":{"cost":"D#1000000","timesBought":"D#0"},"alphaacc":{"cost":"D#10000000000","timesBought":"D#0"},"threeboost":{"cost":"D#1","timesBought":"D#0"},"perbang":{"cost":"D#4","timesBought":"D#0"},"bangspeed":{"cost":"D#1","timesBought":"D#0"},"unlockpca":{"cost":"D#20","timesBought":"D#0"},"upgradepca":{"cost":"D#2","timesBought":"D#0"},"boosterup":{"cost":"D#100","timesBought":"D#0"},"boosteruppercent":{"cost":"D#100","timesBought":"D#0"},"genboostdouble":{"cost":"D#1","timesBought":"D#0"},"alphamachinedouble":{"cost":"D#1000","timesBought":"D#0"},"bangautobuyerunlock":{"cost":"D#1","timesBought":"D#0"},"upgradebangautobuyer":{"cost":"D#1","timesBought":"D#0"},"betaacc":{"cost":"D#10000000000","timesBought":"D#0"},"unlockabgb":{"cost":"D#1","timesBought":"D#0"},"abgbefficiency":{"cost":"D#3","timesBought":"D#0"}},"num":"D#3.7662028908580303e52","genBoostTimeLeft":"D#0","genBoostTimeLeftCon":"D#10","genBoostMult":"D#1","pChunks":"D#0","alphaNum":"D#1.197262141301484e52","bangTime":300,"bangTimeLeft":1e+300,"pcaToggle":true,"pcaTime":160,"chunkAutobuyerTimeLeft":0,"boosterParticles":"D#1.4745635017706773e53","untilBoost":1,"omegaBase":"D#0","omegaBaseCost":"D#10000000000","omegaAlpha":"D#0","omegaAlphaCost":"D#1000000000000","bangAutobuyerToggle":true,"bangAutobuyerTime":160,"bangAutobuyerTimeLeft":0,"clickerParticles":"D#0","machineWear":10,"aGroups":"D#0","betaNum":"D#0","mergeTime":300,"mergeTimeLeft":1e+300}`;
+  localStorage.setItem(window.location.pathname, savefile);
+  window.location.reload();
 };
 
 function D(n) {
@@ -3621,7 +3630,10 @@ let player = {
     "bangautobuyerunlock": { cost: D(1), timesBought: D(0) },
     "upgradebangautobuyer": { cost: D(1), timesBought: D(0) },
     "betaacc": { cost: D(1e10), timesBought: D(0) },
-    "unlockabgb": { cost: D(1), timesBought: D(0) }
+    "unlockabgb": { cost: D(1), timesBought: D(0) },
+    "abgbefficiency": { cost: D(3), timesBought: D(0) },
+    "permerge": { cost: D(4), timesBought: D(0) },
+    "mergespeed": { cost: D(1), timesBought: D(0) }
   },
   num: D(0),
   genBoostTimeLeft: D(0),
@@ -3870,6 +3882,21 @@ const upgrades = {
     scaleFunction: scaleMultiplier(D$1(Infinity)),
     costDiv: "divabgbcost",
     currency: "betaNum"
+  }),
+  abgbefficiency: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(2)),
+    costDiv: "divabgbefficiencycost",
+    currency: "betaNum"
+  }),
+  permerge: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(4)),
+    costDiv: "divpermergecost",
+    currency: "betaNum"
+  }),
+  mergespeed: Upgrade({
+    scaleFunction: scaleBangSpeed,
+    costDiv: "divmergespeedcost",
+    currency: "betaNum"
   })
 };
 function scaleMultiplier(multiplier) {
@@ -3878,7 +3905,7 @@ function scaleMultiplier(multiplier) {
   };
 }
 function scaleBangSpeed(upgradeName) {
-  if (getUpgradeTimesBought(upgradeName).lte(3)) {
+  if (getUpgradeTimesBought(upgradeName).lte(2)) {
     scaleMultiplier(D$1(2))(upgradeName);
   } else {
     scaleMultiplier(D$1(5))(upgradeName);
@@ -3981,7 +4008,8 @@ const features = {
   Bang: Feature({ displayName: "Bang", unlocksAt: D$1(1e9), currency: "num", next: "BA" }),
   BA: Feature({ displayName: "Bang Autobuyer (in Omega tab)", unlocksAt: D$1(1e10), currency: "num", next: "PCA" }),
   PCA: Feature({ displayName: "Particle Chunk Autobuyer", unlocksAt: D$1(20), currency: "alphaNum", next: "NAP" }),
-  NAP: Feature({ displayName: "Nuclear Alpha Particles", unlocksAt: D$1(1e6), currency: "alphaNum", next: void 0 })
+  NAP: Feature({ displayName: "Nuclear Alpha Particles", unlocksAt: D$1(1e6), currency: "alphaNum", next: "Merge" }),
+  Merge: Feature({ displayName: "Merge", unlocksAt: D$1(1e9), currency: "alphaNum", next: void 0 })
 };
 let goal = "GB";
 function nextFeatureHandler() {
@@ -4151,29 +4179,7 @@ window.autosavesettings = function() {
   autoSaveSet();
   saveSettings();
 };
-function loadMisc() {
-  themeExec();
-  prePUD();
-  passiveUnlockDisplay();
-  autoSaveSet();
-  devToolsVisibilityUpdate();
-  for (const upgradeName of UpgradeNames) {
-    const upgrade = upgrades[upgradeName];
-    UpdateCostVal(upgrade.costDiv, getUpgradeCost(upgradeName), upgrade.currency);
-  }
-  if (getUpgradeTimesBought("gen").eq(0)) {
-    getEl("divgencost").textContent = "Cost: Free";
-  } else {
-    UpdateCostVal("divgencost", getUpgradeCost("gen"));
-  }
-  if (getUpgradeTimesBought("unlockgenboost").eq(1)) {
-    getEl("gbshow").style.display = "block";
-    getEl("divgenunlockcost").style.display = "none";
-    getEl("gbunlockbutton").style.display = "none";
-  }
-  getEl("divnp").textContent = "Nuclear Particles: " + formatb(getUpgradeTimesBought("nuclearbuy"));
-  getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatb(getUpgradeTimesBought("nuclearalphabuy"));
-  getEl("chunkamount").textContent = "Particle Chunks: " + formatb(player.pChunks);
+function pcaTestSingle() {
   if (getUpgradeTimesBought("unlockpca").eq(1)) {
     getEl("untilpca").textContent = format(player.chunkAutobuyerTimeLeft) + " left until next autobuy";
     getEl("divtogglepca").style.display = "inline-block";
@@ -4183,6 +4189,8 @@ function loadMisc() {
       getEl("divtogglepca").textContent = "Off";
     }
   }
+}
+function baTestSingle() {
   if (getUpgradeTimesBought("bangautobuyerunlock").eq(1)) {
     getEl("untilba").textContent = format(player.bangAutobuyerTimeLeft) + " left until next autobuy";
     getEl("divtoggleba").style.display = "inline-block";
@@ -4192,10 +4200,38 @@ function loadMisc() {
       getEl("divtoggleba").textContent = "Off";
     }
   }
+}
+function fgbTestSingle() {
+  if (getUpgradeTimesBought("gen").eq(0)) {
+    getEl("divgencost").textContent = "Cost: Free";
+  } else {
+    UpdateCostVal("divgencost", getUpgradeCost("gen"));
+  }
+}
+function amountUpdate() {
+  getEl("divnp").textContent = "Nuclear Particles: " + formatb(getUpgradeTimesBought("nuclearbuy"));
+  getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatb(getUpgradeTimesBought("nuclearalphabuy"));
+  getEl("chunkamount").textContent = "Particle Chunks: " + formatb(player.pChunks);
+  getEl("groupamount").textContent = "Particle Chunks: " + formatb(player.aGroups);
   getEl("omegabasecost").textContent = "Cost: " + formatb(player.omegaBaseCost);
   getEl("divobase").textContent = "You have " + formatb(player.omegaBase);
   getEl("omegaalphacost").textContent = "Cost: " + formatb(player.omegaAlphaCost);
   getEl("divoalpha").textContent = "You have " + formatb(player.omegaAlpha);
+}
+function loadMisc() {
+  for (const upgradeName of UpgradeNames) {
+    const upgrade = upgrades[upgradeName];
+    UpdateCostVal(upgrade.costDiv, getUpgradeCost(upgradeName), upgrade.currency);
+  }
+  themeExec();
+  prePUD();
+  passiveUnlockDisplay();
+  autoSaveSet();
+  devToolsVisibilityUpdate();
+  pcaTestSingle();
+  baTestSingle();
+  fgbTestSingle();
+  amountUpdate();
 }
 function makeElementMap(...names) {
   const entries = names.map(function(x) {
@@ -4364,11 +4400,16 @@ function merge() {
   }
 }
 window.merge = merge;
-function fgbtest() {
+function fgbTestConst() {
   if (getUpgradeTimesBought("gen").gt(0)) {
     getEl("boostsection").style.display = "flex";
     getEl("bigboosttext").style.display = "block";
     getEl("veryouterboost").style.display = "block";
+    if (getUpgradeTimesBought("gen").eq(0)) {
+      getEl("divgencost").textContent = "Cost: Free";
+    } else {
+      UpdateCostVal("divgencost", getUpgradeCost("gen"));
+    }
     if (player.genBoostTimeLeft.greaterThan(0)) {
       player.genBoostMult = getUpgradeTimesBought("genboostupmult").times(5).plus(5);
     } else {
@@ -4379,9 +4420,15 @@ function fgbtest() {
       getEl("divgenunlockcost").style.display = "none";
       getEl("gbunlockbutton").style.display = "none";
     }
+    if (getUpgradeTimesBought("unlockabgb").eq(1)) {
+      getEl("abgbshow").style.display = "block";
+      getEl("divabgbcost").style.display = "none";
+      getEl("abgbunlockbutton").style.display = "none";
+    }
     player.bangTime = Math.ceil(300 / Math.pow(2, getUpgradeTimesBought("bangspeed").toNumber()));
     const alphaGain = onBought("alphaacc", ["perbang", "+", D$1(1)], ["nuclearalphabuy", "+", D$1(1)], [D$1(2), "^", "alphamachinedouble"]);
-    const betaGain = onBought("alphaacc");
+    player.mergeTime = Math.ceil(300 / Math.pow(2, getUpgradeTimesBought("mergespeed").toNumber()));
+    const betaGain = onBought("betaacc", ["permerge", "+", D$1(1)]);
     if (player.bangTimeLeft === 0) {
       player.alphaNum = player.alphaNum.plus(alphaGain);
       getEl("bangtimeleft").textContent = "";
@@ -4395,7 +4442,11 @@ function fgbtest() {
       player.machineWear += 1;
     }
     clickerParticleMult = player.clickerParticles.div(100).plus(1);
-    const gain = onBought(["biggerbatches", "+", D$1(1)], "*", "gen", "*", ["speed", "/", D$1(10), "+", D$1(0.1)], "*", player.genBoostMult, "*", [["nuclearbuy", "+", D$1(1)], "^", D$1(2)], "*", [D$1(3), "^", "threeboost"], "*", [D$1(1), "+", [[player.boosterParticles, "+", D$1(1)], "/", D$1(100), "*", [["boosteruppercent", "+", D$1(1)], "/", D$1(100)]]]);
+    let abgbBoost = D$1(1);
+    if (getUpgradeTimesBought("unlockabgb").gt(0)) {
+      abgbBoost = onBoughtInc(player.alphaNum, "/", D$1(100), "*", "abgbefficiency", "+", D$1(1));
+    }
+    const gain = onBought(["biggerbatches", "+", D$1(1)], "*", "gen", "*", ["speed", "/", D$1(10), "+", D$1(0.1)], "*", player.genBoostMult, "*", [["nuclearbuy", "+", D$1(1)], "^", D$1(2)], "*", [D$1(3), "^", "threeboost"], "*", [D$1(1), "+", [[player.boosterParticles, "+", D$1(1)], "/", D$1(100), "*", [["boosteruppercent", "+", D$1(1)], "/", D$1(100)]]], "*", abgbBoost);
     getEl("particlesperclick").textContent = "You are getting " + formatb(onBought(["mbup", "+", D$1(1)], "*", ["mbmult", "+", D$1(1)], "*", ["nuclearbuy", "+", D$1(1)]).times(clickerParticleMult)) + " particles per click";
     getEl("alphapb").textContent = "You are getting " + formatb(alphaGain) + " Alpha/bang";
     getEl("bangtimeconst").textContent = "Currently, bangs take " + format(player.bangTime / 10) + " seconds.";
@@ -4415,18 +4466,18 @@ function fgbtest() {
     } else {
       getEl("mergebutton").style.display = "block";
     }
-    if (player.genBoostTimeLeft.greaterThan(0)) {
+    if (player.genBoostTimeLeft.gt(0)) {
       player.genBoostTimeLeft = player.genBoostTimeLeft.minus(1);
     }
     getEl("divgbtl").textContent = "Boost Time Left: " + formatb(player.genBoostTimeLeft.div(10));
-    const totalGain = player.alphaNum.times(getUpgradeTimesBought("boosterup").plus(1)).times(D$1(2)).div(10);
-    player.boosterParticles = player.boosterParticles.plus(totalGain);
+    const bpGain = player.alphaNum.times(getUpgradeTimesBought("boosterup").plus(1)).times(D$1(2)).div(10);
+    player.boosterParticles = player.boosterParticles.plus(bpGain);
     const percentBoostDisplay = player.boosterParticles.times(getUpgradeTimesBought("boosteruppercent").plus(1).div(100));
     if (percentBoostDisplay.lt(100)) {
-      getEl("boostersmaintext").textContent = `You are currently getting ${formatb(totalGain.times(10))} booster particles per alpha particle per second,
+      getEl("boostersmaintext").textContent = `You are currently getting ${formatb(bpGain.times(10))} booster particles per alpha particle per second,
                resulting in a +${formatbSpecific(percentBoostDisplay)}% boost to base particle production`;
     } else {
-      getEl("boostersmaintext").textContent = `You are currently getting ${formatb(totalGain.times(10))} booster particles per alpha particle per second,
+      getEl("boostersmaintext").textContent = `You are currently getting ${formatb(bpGain.times(10))} booster particles per alpha particle per second,
                resulting in a ${formatbSpecific(percentBoostDisplay.div(100).plus(1))}x boost to base particle production`;
     }
     getEl("bpamount").textContent = "You have " + formatb(player.boosterParticles) + " booster particles";
@@ -4460,7 +4511,7 @@ function fgbtest() {
     getEl("betacounter").textContent = formatb(player.betaNum) + " Beta particles";
   }
 }
-function pcatest() {
+function pcaTestConst() {
   if (getUpgradeTimesBought("unlockpca").eq(1)) {
     getEl("pcashow").style.display = "block";
     getEl("divunlockpca").style.display = "none";
@@ -4475,7 +4526,7 @@ function pcatest() {
     }
   }
 }
-function batest() {
+function baTestConst() {
   if (getUpgradeTimesBought("bangautobuyerunlock").eq(1)) {
     getEl("bashow").style.display = "block";
     getEl("divbau").style.display = "none";
@@ -4500,9 +4551,9 @@ function savinginloop() {
 }
 setInterval(() => {
   passiveUnlockDisplay();
-  pcatest();
-  batest();
-  fgbtest();
+  pcaTestConst();
+  baTestConst();
+  fgbTestConst();
   getEl("stat").textContent = getSaveString().replace(/","/g, '",\n"').replace(/},"/g, '",\n"');
   savinginloop();
 }, 100);
@@ -4531,4 +4582,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.d9d28d9a.js.map
+//# sourceMappingURL=index.d66c55b9.js.map

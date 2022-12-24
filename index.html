@@ -8,8 +8,8 @@
 
     
 
-    <script type="module" crossorigin src="/Particle-Incremental-Canary/assets/index.d9d28d9a.js"></script>
-    <link rel="stylesheet" href="/Particle-Incremental-Canary/assets/index.9a4979c2.css">
+    <script type="module" crossorigin src="/Particle-Incremental-Canary/assets/index.d66c55b9.js"></script>
+    <link rel="stylesheet" href="/Particle-Incremental-Canary/assets/index.fbea3012.css">
   </head>
 
   <body>
@@ -219,8 +219,8 @@
             <button onclick="buyUpgrade('betaacc')" class="button">Buy Beta Accelerator</button>
             <button onclick="makegroup()" class="button">Make Alpha Group</button>
           </div>
-          <div id="divbetaacceleratorcost">Cost: 1e12</div>
-          <div id="gcosttext">Cost: 1e9</div>
+          <div id="divbetaacceleratorcost">Cost: 1e12 Alpha</div>
+          <div id="gcosttext">Cost: 1e9 Alpha</div>
           <br>
           <br>
           <div id="mergecenteringfix">
@@ -237,10 +237,22 @@
         <div id="betacounter">0 Beta particles</div>
         <div id="betapb">You are getting 1 beta/merge</div>
         <br>
-        <button onclick="buyUpgrade('unlockabgb')" class="button">Unlock Alpha-based Generator boost</button>
-        <div id="divabgbcost">1 Beta</div>
-        <div id="abgbshow">
-          asdfghjkkl
+        <div class="btn-group">
+          <button onclick="buyUpgrade('mergespeed')" class="button">Make merge twice as fast</button>
+          <button onclick="buyUpgrade('permerge')" class="button">+1 Beta per merge</button>
+        </div>
+        <div id="divmergespeedcost">Cost: 1 Alpha</div>
+        <div id="divpermergecost">Cost: 4 Alpha</div>
+        <br>
+        <br>
+        <div id="abgbbox" class="withtheoutline">
+          <br>
+          <button onclick="buyUpgrade('unlockabgb')" class="button" id="abgbunlockbutton">Unlock Alpha-based Generator boost</button>
+          <div id="divabgbcost">Cost: 1 Beta</div>
+          <div id="abgbshow" style="display:none">
+            <button onclick="buyUpgrade('abgbefficiency')" class="button">ABGB is stronger</button>
+            <div id="divabgbefficiencycost">Cost: 3 beta</div>
+          </div>
         </div>
       </div>
 
@@ -377,7 +389,7 @@
         <br>
         Changelog:
         <br>
-        Beta tab
+        Beta tab, developer tools, balancing changes, and more.
       </div>
       <div id="Tutorial" style="display:none">
         A generator gives you n particles every loop. Default is 1 loop per second and 1 particle per loop. <br>
@@ -426,7 +438,11 @@
             case 4:
               player.num = player.num.times(2)
               player.alphaNum = player.alphaNum.plus(1).times(2)
+            case 5:
+              player.betaNum = player.betaNum.plus(1).times(2)
+              break;
           </pre>
+          <button onclick="opsave()" class="button">opsave</button>
       </div>
     </div>
     </body>
