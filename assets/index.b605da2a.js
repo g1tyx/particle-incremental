@@ -42,7 +42,7 @@ const p = function polyfill() {
     }
 };true&&p();
 
-var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#betacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divbetaacceleratorcost {\n  display: inline-block;\n}\n#gcosttext {\n  display: inline-block;\n  text-indent: 2.3em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#omegabasecost {\n  display: inline-block;\n}\n#omegaalphacost {\n  display: inline-block;\n  text-indent: 3.5em;\n}\n#omegabetacost {\n  display: inline-block;\n  text-indent: 6em;\n}\n#omegagammacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#omegadeltacost {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divobase {\n  display: inline-block;\n}\n#divoalpha {\n  display: inline-block;\n  text-indent: 4.5em;\n}\n#divobeta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divogamma {\n  display: inline-block;\n  text-indent: 7em;\n}\n#divodelta {\n  display: inline-block;\n  text-indent: 7em;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center;}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#mergecenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n}\n#mergeshow {\n  display:none; \n}\n#nuclearalphashow {\n  display:none; \n}\n.withtheoutline {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 1em;\n}\n#devtoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divmergespeedcost {\n  display:inline-block;\n}\n#divpermergecost {\n  display:inline-block;\n  text-indent: 3em;\n}\n")();
+var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#betacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divbetaacceleratorcost {\n  display: inline-block;\n}\n#gcosttext {\n  display: inline-block;\n  text-indent: 2.3em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center;}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#mergecenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n}\n#mergeshow {\n  display:none; \n}\n#nuclearalphashow {\n  display:none; \n}\n.withtheoutline {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 1em;\n}\n#devtoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divmergespeedcost {\n  display:inline-block;\n}\n#divpermergecost {\n  display:inline-block;\n  text-indent: 3em;\n}\n.flexycentering {\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  gap: 3em;\n}")();
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -3599,6 +3599,10 @@ window.opsave = function() {
   localStorage.setItem(window.location.pathname, savefile);
   window.location.reload();
 };
+window.clearls = function() {
+  localStorage.clear();
+  window.location.reload();
+};
 
 function D(n) {
   return new Decimal(n);
@@ -3633,7 +3637,10 @@ let player = {
     "unlockabgb": { cost: D(1), timesBought: D(0) },
     "abgbefficiency": { cost: D(3), timesBought: D(0) },
     "permerge": { cost: D(4), timesBought: D(0) },
-    "mergespeed": { cost: D(1), timesBought: D(0) }
+    "mergespeed": { cost: D(1), timesBought: D(0) },
+    "GnBBAunlock": { cost: D(0.5), timesBought: D(0) },
+    "GBUAunlock": { cost: D(0.5), timesBought: D(0) },
+    "MBUAunlock": { cost: D(0.5), timesBought: D(0) }
   },
   num: D(0),
   genBoostTimeLeft: D(0),
@@ -3660,10 +3667,16 @@ let player = {
   aGroups: D(0),
   betaNum: D(0),
   mergeTime: 300,
-  mergeTimeLeft: 1e300
+  mergeTimeLeft: 1e300,
+  genAutobuyerToggle: false,
+  bbAutobuyerToggle: false,
+  genBoostTimeAutobuyerToggle: false,
+  genBoostMultAutobuyerToggle: false,
+  manBoost1perClickAutobuyerToggle: false,
+  manBoost1xperClickAutobuyerToggle: false
 };
 let playerSettings = {
-  version: "b2.0.0.0a13",
+  version: "b2.0.0.0a14",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3690,19 +3703,21 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b2.0.0.0a13") {
+  if (playerSettings.version !== "b2.0.0.0a14") {
     localStorage.removeItem(window.location.pathname + "settings");
     localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b2.0.0.0a13";
+    playerSettings.version = "b2.0.0.0a14";
     window.location.reload();
   }
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
     getEl("tabopendelta").style.display = "inline";
+    getEl("tabopenomegaomega").style.display = "inline";
     getEl("tabopenachievements").style.display = "inline";
   } else {
     getEl("tabopengamma").style.display = "none";
     getEl("tabopendelta").style.display = "none";
+    getEl("tabopenomegaomega").style.display = "none";
     getEl("tabopenachievements").style.display = "none";
   }
   getEl("experimentoggle").textContent = playerSettings.useExperimental.toString();
@@ -3736,7 +3751,8 @@ const currencyName = {
   num: "",
   alphaNum: " Alpha",
   omegaBase: " ",
-  betaNum: " Beta"
+  betaNum: " Beta",
+  omegaAlpha: " "
 };
 function UpdateCostVal(elementID, variable, currency = "num") {
   getEl(elementID).textContent = "Cost: " + formatb(variable) + currencyName[currency];
@@ -3897,6 +3913,21 @@ const upgrades = {
     scaleFunction: scaleBangSpeed,
     costDiv: "divmergespeedcost",
     currency: "betaNum"
+  }),
+  GnBBAunlock: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(Infinity)),
+    costDiv: "usewhencostdisplaynotneeded",
+    currency: "omegaAlpha"
+  }),
+  GBUAunlock: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(Infinity)),
+    costDiv: "usewhencostdisplaynotneeded",
+    currency: "omegaAlpha"
+  }),
+  MBUAunlock: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(Infinity)),
+    costDiv: "usewhencostdisplaynotneeded",
+    currency: "omegaAlpha"
   })
 };
 function scaleMultiplier(multiplier) {
@@ -4137,8 +4168,12 @@ function prePUD() {
   getEl("tabopengamma").style.display = "none";
   getEl("tabopendelta").style.display = "none";
   getEl("tabopenomega").style.display = "none";
+  getEl("tabopenomegaomega").style.display = "none";
 }
 function passiveUnlockDisplay() {
+  if (player.num.gte(1e5)) {
+    getEl("tabopenfactory").style.display = "inline";
+  }
   if (player.num.gte(1e9)) {
     getEl("tabopenalpha").style.display = "inline";
     getEl("tabopenomega").style.display = "inline";
@@ -4148,14 +4183,8 @@ function passiveUnlockDisplay() {
   }
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
-  }
-  if (playerSettings.useExperimental) {
     getEl("tabopendelta").style.display = "inline";
-  }
-  if (player.num.gte(1e5)) {
-    getEl("tabopenfactory").style.display = "inline";
-  }
-  if (playerSettings.useExperimental) {
+    getEl("tabopenomegaomega").style.display = "inline";
     getEl("tabopenachievements").style.display = "inline";
   }
 }
@@ -4239,8 +4268,8 @@ function makeElementMap(...names) {
   });
   return Object.fromEntries(entries);
 }
-const tabElements = makeElementMap("Base", "Factory", "Alpha", "Beta", "Gamma", "Delta", "Omega", "Achievements", "Stats", "Settings", "Tutorial", "Dev");
-const tabOmegaElements = makeElementMap("oBase", "oAlpha", "oBeta", "oGamma", "oDelta", "oOmega");
+const tabElements = makeElementMap("Base", "Factory", "Alpha", "Beta", "Gamma", "Delta", "Omega", "OmegaOmega", "Achievements", "Stats", "Settings", "Tutorial", "Dev");
+const tabOmegaElements = makeElementMap("oBase", "oAlpha", "oBeta", "oGamma", "oDelta");
 function hideElements(elements) {
   for (const name in elements) {
     elements[name].style.display = "none";
@@ -4287,10 +4316,12 @@ window.experimentalToggle = function() {
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
     getEl("tabopendelta").style.display = "inline";
+    getEl("tabopenomegaomega").style.display = "inline";
     getEl("tabopenachievements").style.display = "inline";
   } else {
     getEl("tabopengamma").style.display = "none";
     getEl("tabopendelta").style.display = "none";
+    getEl("tabopenomegaomega").style.display = "none";
     getEl("tabopenachievements").style.display = "none";
   }
   getEl("experimentoggle").textContent = playerSettings.useExperimental.toString();
@@ -4485,9 +4516,9 @@ function fgbTestConst() {
     player.clickerParticles = player.clickerParticles.plus(clickerParticleGain);
     nextFeatureHandler();
     getEl("omegabasecost").textContent = "Cost: " + formatb(player.omegaBaseCost);
-    getEl("divobase").textContent = "You have " + formatb(player.omegaBase);
+    getEl("divobase").textContent = "You have " + formatD(player.omegaBase, 1);
     getEl("omegaalphacost").textContent = "Cost: " + formatb(player.omegaAlphaCost);
-    getEl("divoalpha").textContent = "You have " + formatb(player.omegaAlpha);
+    getEl("divoalpha").textContent = "You have " + formatD(player.omegaAlpha, 1);
     player.num = player.num.plus(gain);
     getEl("particlespersecond").textContent = "You are getting " + formatb(gain.times(10)) + " particles/s";
     if (player.num.gte(1e6)) {
@@ -4499,11 +4530,12 @@ function fgbTestConst() {
       getEl("nuclearalphashow").style.display = "block";
     }
     if (player.num.gte(1e9)) {
-      getEl("bangreach").style.display = "none";
       getEl("bangshow").style.display = "block";
     }
     if (player.alphaNum.gte(1e9)) {
       getEl("mergeshow").style.display = "block";
+      getEl("oAlphauupre").style.display = "none";
+      getEl("oAlphauupost").style.display = "block";
     }
     getEl("counter").textContent = formatb(player.num) + " particles";
     getEl("clickercounter").textContent = `You have ${formatb(player.clickerParticles)} Clicker Particles (${formatb(clickerParticleGain.times(10))}/s), which are making Manual Boost ${formatbSpecific(clickerParticleMult)}x stronger.`;
@@ -4542,6 +4574,26 @@ function baTestConst() {
     }
   }
 }
+function instantAutobuyers() {
+  if (player.genAutobuyerToggle === true && getUpgradeTimesBought("GnBBAunlock").eq(1)) {
+    buyUpgrade("gen");
+  }
+  if (player.bbAutobuyerToggle === true && getUpgradeTimesBought("GnBBAunlock").eq(1)) {
+    buyUpgrade("biggerbatches");
+  }
+  if (player.genBoostTimeAutobuyerToggle === true && getUpgradeTimesBought("GBUAunlock").eq(1)) {
+    buyUpgrade("genboostuptime");
+  }
+  if (player.genBoostMultAutobuyerToggle === true && getUpgradeTimesBought("GBUAunlock").eq(1)) {
+    buyUpgrade("genboostupmult");
+  }
+  if (player.manBoost1perClickAutobuyerToggle === true && getUpgradeTimesBought("MBUAunlock").eq(1)) {
+    buyUpgrade("mbup");
+  }
+  if (player.manBoost1xperClickAutobuyerToggle === true && getUpgradeTimesBought("MBUAunlock").eq(1)) {
+    buyUpgrade("mbmult");
+  }
+}
 function savinginloop() {
   playerSettings.autoSaveDelay -= 1;
   if (playerSettings.autoSaveDelay === 0) {
@@ -4554,6 +4606,7 @@ setInterval(() => {
   pcaTestConst();
   baTestConst();
   fgbTestConst();
+  instantAutobuyers();
   getEl("stat").textContent = getSaveString().replace(/","/g, '",\n"').replace(/},"/g, '",\n"');
   savinginloop();
 }, 100);
@@ -4582,4 +4635,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.cdf8651e.js.map
+//# sourceMappingURL=index.b605da2a.js.map
