@@ -3696,7 +3696,7 @@ let player = {
   }
 };
 let playerSettings = {
-  version: "b2.0.0.0a14",
+  version: "b2.0.0.0a15",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3723,10 +3723,10 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b2.0.0.0a14") {
+  if (playerSettings.version !== "b2.0.0.0a15") {
     localStorage.removeItem(window.location.pathname + "settings");
     localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b2.0.0.0a14";
+    playerSettings.version = "b2.0.0.0a15";
     window.location.reload();
   }
   if (playerSettings.useExperimental) {
@@ -4843,4 +4843,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.d8aae6e6.js.map
+//# sourceMappingURL=index.be1f52ac.js.map
