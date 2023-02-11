@@ -151,7 +151,6 @@ button:active {
   border-radius: 2px;
   border: 1px solid black;
   box-shadow: none;
-  font-family: 'Tahoma';
   font-weight: 500;
   cursor: pointer;
 }
@@ -167,7 +166,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-* {text-align: center;}
+* {text-align: center; font-family: 'Arial'}
 #boostsection {
   display:flex;
   justify-content: center;
@@ -250,4 +249,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3em;
+}
+#flexyreactor {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.flexyreactorcosts {
+  display: flex;
+  gap: 9em;
 }
