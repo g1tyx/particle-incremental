@@ -3696,7 +3696,7 @@ let player = {
   }
 };
 let playerSettings = {
-  version: "b2.0.0.0a15",
+  version: "b2.0.0.0",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3723,10 +3723,10 @@ function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b2.0.0.0a15") {
+  if (playerSettings.version !== "b2.0.0.0") {
     localStorage.removeItem(window.location.pathname + "settings");
     localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b2.0.0.0a15";
+    playerSettings.version = "b2.0.0.0";
     window.location.reload();
   }
   if (playerSettings.useExperimental) {
@@ -3777,8 +3777,12 @@ const currencyName = {
   betaNum: " Beta",
   omegaAlpha: " "
 };
-function UpdateCostVal(elementID, variable, currency = "num", prec = 0) {
-  getEl(elementID).textContent = "Cost: " + formatD(variable, prec) + currencyName[currency];
+function UpdateCostVal(elementID, variable, currency = "num", prec = 2) {
+  if (prec === 2) {
+    getEl(elementID).textContent = "Cost: " + formatb(variable) + currencyName[currency];
+  } else {
+    getEl(elementID).textContent = "Cost: " + formatD(variable, prec) + currencyName[currency];
+  }
 }
 function Upgrade(x) {
   return x;
@@ -4420,16 +4424,6 @@ window.saveImportConfirm = function() {
   localStorage.setItem(window.location.pathname, savefile);
   window.location.reload();
 };
-window.setting1e4 = function() {
-  playerSettings.eSetting = 4;
-  loadMisc();
-  saveSettings();
-};
-window.setting1e6 = function() {
-  playerSettings.eSetting = 6;
-  loadMisc();
-  saveSettings();
-};
 window.experimentalToggle = function() {
   playerSettings.useExperimental = !playerSettings.useExperimental;
   if (playerSettings.useExperimental) {
@@ -4500,7 +4494,7 @@ function reactorHandler() {
 }
 let totalBoostFromNP = nuclearParticles.times(reactor.boost);
 window.mbman = function() {
-  const gain = onBoughtInc("mbup", "*", "mbmult").times(clickerParticleMult).times(totalBoostFromNP);
+  const gain = onBoughtInc("mbup", "*", "mbmult").times(clickerParticleMult).times(totalBoostFromNP.plus(1));
   player.num = player.num.plus(gain);
   getEl("counter").textContent = formatb(player.num) + " particles";
 };
@@ -4626,8 +4620,8 @@ function fgbTestConst() {
     reactorHandler();
     totalBoostFromNP = nuclearParticles.times(reactor.boost);
     getEl("nptext").textContent = `Nuclear particles add a +${formatD(reactor.boost, 2)}x multiplier to generators, generator boost, and manual boost`;
-    const boostsacmult = D$1(2).pow(getUpgradeTimesBought("boostsacrifice"));
-    getEl("boostsactext").textContent = `Reset your Booster Particles, but double their and Alpha Particle gain. Currently ${formatb(boostsacmult)}x.`;
+    const boostsacmult = D$1(1.5).pow(getUpgradeTimesBought("boostsacrifice"));
+    getEl("boostsactext").textContent = `Reset your Booster Particles, but increase Booster Particle and Alpha Particle gain. Currently ${formatD(boostsacmult, 1)}x.`;
     if (player.genBoostTimeLeft.greaterThan(0)) {
       player.genBoostMult = getUpgradeTimesBought("genboostupmult").times(1.5).plus(2);
     } else {
@@ -4728,6 +4722,8 @@ function fgbTestConst() {
     if (player.boosterParticles.gte(1e5) || getUpgradeTimesBought("boostsacrifice").gt(0)) {
       getEl("bpsacshow").style.display = "block";
     }
+    const freeNuclearParticles = nuclearParticles.minus(getUpgradeTimesBought("nuclearbuy"));
+    getEl("npboosttext").textContent = `Your Nuclear Particles Boost is giving you ${formatD(freeNuclearParticles, 1)} free Nuclear Particles`;
     getEl("counter").textContent = formatb(player.num) + " particles";
     getEl("clickercounter").textContent = `You have ${formatb(player.clickerParticles)} Clicker Particles (${formatb(clickerParticleGain.times(10))}/s), which are making Manual Boost ${formatbSpecific(clickerParticleMult)}x stronger.`;
     getEl("alphacounter").textContent = formatb(player.alphaNum) + " Alpha particles";
@@ -4771,35 +4767,53 @@ function baTestConst() {
   }
 }
 function instantAutobuyers() {
-  if (player.instantAutobuyers.genAutobuyerToggle === true && getUpgradeTimesBought("GnBBAunlock").eq(1)) {
-    buyUpgrade("gen");
+  if (getUpgradeTimesBought("GnBBAunlock").eq(1)) {
+    if (player.instantAutobuyers.genAutobuyerToggle === true) {
+      buyUpgrade("gen");
+    }
+    if (player.instantAutobuyers.bbAutobuyerToggle === true) {
+      buyUpgrade("biggerbatches");
+    }
+    getEl("divGnBBA").style.display = "none";
   }
-  if (player.instantAutobuyers.bbAutobuyerToggle === true && getUpgradeTimesBought("GnBBAunlock").eq(1)) {
-    buyUpgrade("biggerbatches");
+  if (getUpgradeTimesBought("GBUAunlock").eq(1)) {
+    if (player.instantAutobuyers.genBoostTimeAutobuyerToggle === true) {
+      buyUpgrade("genboostuptime");
+    }
+    if (player.instantAutobuyers.genBoostMultAutobuyerToggle === true) {
+      buyUpgrade("genboostupmult");
+    }
+    getEl("divGBUA").style.display = "none";
   }
-  if (player.instantAutobuyers.genBoostTimeAutobuyerToggle === true && getUpgradeTimesBought("GBUAunlock").eq(1)) {
-    buyUpgrade("genboostuptime");
+  if (getUpgradeTimesBought("MBUAunlock").eq(1)) {
+    if (player.instantAutobuyers.manBoost1perClickAutobuyerToggle === true) {
+      buyUpgrade("mbup");
+    }
+    if (player.instantAutobuyers.manBoost1xperClickAutobuyerToggle === true) {
+      buyUpgrade("mbmult");
+    }
+    getEl("divMBUA").style.display = "none";
   }
-  if (player.instantAutobuyers.genBoostMultAutobuyerToggle === true && getUpgradeTimesBought("GBUAunlock").eq(1)) {
-    buyUpgrade("genboostupmult");
+  if (getUpgradeTimesBought("NPAunlock").eq(1)) {
+    if (player.instantAutobuyers.nuclearParticlesAutobuyerToggle === true) {
+      buyUpgrade("nuclearbuy");
+    }
+    if (player.instantAutobuyers.nuclearAlphaParticlesAutobuyerToggle === true) {
+      buyUpgrade("nuclearalphabuy");
+    }
+    getEl("divNPA").style.display = "none";
   }
-  if (player.instantAutobuyers.manBoost1perClickAutobuyerToggle === true && getUpgradeTimesBought("MBUAunlock").eq(1)) {
-    buyUpgrade("mbup");
+  if (getUpgradeTimesBought("AAccAunlock").eq(1)) {
+    if (player.instantAutobuyers.AlphaAccAutobuyerToggle === true) {
+      buyUpgrade("alphaacc");
+    }
+    getEl("divAAccA").style.display = "none";
   }
-  if (player.instantAutobuyers.manBoost1xperClickAutobuyerToggle === true && getUpgradeTimesBought("MBUAunlock").eq(1)) {
-    buyUpgrade("mbmult");
-  }
-  if (player.instantAutobuyers.nuclearParticlesAutobuyerToggle === true && getUpgradeTimesBought("NPAunlock").eq(1)) {
-    buyUpgrade("nuclearbuy");
-  }
-  if (player.instantAutobuyers.nuclearAlphaParticlesAutobuyerToggle === true && getUpgradeTimesBought("NPAunlock").eq(1)) {
-    buyUpgrade("nuclearalphabuy");
-  }
-  if (player.instantAutobuyers.AlphaAccAutobuyerToggle === true && getUpgradeTimesBought("AAccAunlock").eq(1)) {
-    buyUpgrade("alphaacc");
-  }
-  if (player.instantAutobuyers.SpeedAutobuyerToggle === true && getUpgradeTimesBought("SAunlock").eq(1)) {
-    buyUpgrade("speed");
+  if (getUpgradeTimesBought("SAunlock").eq(1)) {
+    if (player.instantAutobuyers.SpeedAutobuyerToggle === true) {
+      buyUpgrade("speed");
+    }
+    getEl("divSA").style.display = "none";
   }
 }
 function savinginloop() {
@@ -4843,4 +4857,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.be1f52ac.js.map
+//# sourceMappingURL=index.ca6af163.js.map
