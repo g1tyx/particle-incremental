@@ -8,7 +8,7 @@
 
     
 
-    <script type="module" crossorigin src="/Particle-Incremental-Canary/assets/index.ca6af163.js"></script>
+    <script type="module" crossorigin src="/Particle-Incremental-Canary/assets/index.ed1df6ef.js"></script>
     <link rel="stylesheet" href="/Particle-Incremental-Canary/assets/index.00a51914.css">
   </head>
 
@@ -338,17 +338,20 @@
         <div class="flexycentering">
           <div>
             <button onclick="buyomegabase()" class="button" id="obb">Buy Ω<sub>B</sub> particles</button>
-            <div id="omegabasecost">Cost: 1e10 particles</div>
+            <br>
+            <div id="omegabasecost" style="display:inline">Cost: 1e10</div><!-- <span style="display:inline">B</span> -->
             <div id="divobase">You have 0</div>  
           </div>
           <div>
             <button onclick="buyomegaalpha()" class="button" id="oab">Buy Ω<sub>α</sub> particles</button>
-            <div id="omegaalphacost">Cost: 1e12 Alpha particles</div>
+            <br>
+            <div id="omegaalphacost" style="display:inline">Cost: 1e12</div><span style="display:inline">α</span>
             <div id="divoalpha">You have 0</div>
           </div>
           <div>
             <button onclick="buyomegabeta()" class="button" id="obeb">Buy Ω<sub>β</sub> particles</button>
-            <div id="omegabetacost">Cost: Out of stock</div>
+            <br>
+            <div id="omegabetacost" style="display:inline">Cost: 1e14</div><span style="display:inline">β</span>
             <div id="divobeta">You have 0</div>
           </div>
           <div>
@@ -545,11 +548,11 @@
         <a href="https://github.com/typeholes">qhwood</a>
         for improving my code and helping me code.
         <br><br>
-        Version b2.0.0.0
+        Version b2.0.0.1
         <br>
         Changelog:
         <br>
-        Added Beta tab, Added Reactor tab, balancing changes, bugfixes, Omega tab revamp, made Bang section easier to understand, improved code, developer tools.
+        Made omega tab more clear, changed some code relating to versions.
       </div>
       <div id="Tutorial" style="display:none">
         A generator gives you n particles every loop. Default is 1 loop per second and 1 particle per loop. <br>

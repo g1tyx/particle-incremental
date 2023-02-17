@@ -3696,7 +3696,7 @@ let player = {
   }
 };
 let playerSettings = {
-  version: "b2.0.0.0",
+  version: "b2.0.0.1",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3719,16 +3719,21 @@ function setUpgradeCost(upgradeName, costIn) {
 function getUpgradeTimesBought(upgradeName) {
   return player.upgrades[upgradeName].timesBought;
 }
+function updateGame() {
+  const stage = Number(playerSettings.version.substring(1, 2));
+  if (stage !== 2) {
+    localStorage.removeItem(window.location.pathname + "settings");
+    localStorage.removeItem(window.location.pathname);
+    playerSettings.version = "b2.0.0.1";
+    window.location.reload();
+  }
+  playerSettings.version = "b2.0.0.1";
+}
 function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
     playerSettings = JSON.parse(localStorage.getItem(window.location.pathname + "settings"));
   }
-  if (playerSettings.version !== "b2.0.0.0") {
-    localStorage.removeItem(window.location.pathname + "settings");
-    localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b2.0.0.0";
-    window.location.reload();
-  }
+  updateGame();
   if (playerSettings.useExperimental) {
     getEl("tabopengamma").style.display = "inline";
     getEl("tabopendelta").style.display = "inline";
@@ -4857,4 +4862,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.ca6af163.js.map
+//# sourceMappingURL=index.ed1df6ef.js.map
