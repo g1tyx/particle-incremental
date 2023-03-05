@@ -42,7 +42,7 @@ const p = function polyfill() {
     }
 };true&&p();
 
-var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#betacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divbetaacceleratorcost {\n  display: inline-block;\n}\n#gcosttext {\n  display: inline-block;\n  text-indent: 2.3em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center; font-family: 'Arial'}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#mergecenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n}\n#mergeshow {\n  display:none; \n}\n#nuclearalphashow {\n  display:none; \n}\n.withtheoutline {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 1em;\n}\n#devtoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divmergespeedcost {\n  display:inline-block;\n}\n#divpermergecost {\n  display:inline-block;\n  text-indent: 3em;\n}\n.flexycentering {\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  gap: 3em;\n}\n#flexyreactor {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 1em;\n}\n.flexyreactorcosts {\n  display: flex;\n  gap: 9em;\n}")();
+var style = /* #__PURE__ */ (() => "button:hover {\n  color: blue;\n}\nbutton:active {\n  color: #0099FF\n}\n#divgencost {\n  display: inline-block;\n}\n#divbbcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#divtenspeedcost {\n  display: inline-block;\n  text-indent: 1.25em;\n}\n#counter {\n  font-size: x-large;\n  padding-bottom: 0.05em;\n}\n#alphacounter {\n  font-size: x-large;\n}\n#betacounter {\n  font-size: x-large;\n}\n#divmbupcost {\n  display: inline-block;\n  text-indent: 6.5em;\n}\n#divmbmultcost {\n  display: inline-block;\n  text-indent: 5.75em;\n}\n#divalphaacceleratorcost {\n  display: inline-block;\n}\n#pcosttext {\n  display: inline-block;\n  text-indent: 4em;\n}\n#divbetaacceleratorcost {\n  display: inline-block;\n}\n#gcosttext {\n  display: inline-block;\n  text-indent: 2.3em;\n}\n#divgenboost {\n  display: inline-block;\n}\n#divgbuptcost {\n  display: inline-block;\n  text-indent: 7.5em;\n}\n#divgbupmcost {\n  display: inline-block;\n  text-indent: 4.75em;\n}\n#divthreeboostcost {\n  display: inline-block;\n}\n#divperbangcost {\n  display: inline-block;\n  text-indent: 7.25em;\n}\n.redb {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-family: 'Tahoma';\n  font-weight: 500;\n  cursor: pointer;\n  color: red\n}\n.redb:hover {\n  color: #FF00FF\n}\n.redb:active {\n  color: #0099FF\n}\n#stat {\n  word-break:break-all;\n}\n#divunlockpca {\n  display: inline-block;\n}\n#divupgradepcacost {\n  display: inline-block;\n}\n#divboosterupcost {\n  display: inline-block;\n}\n#divboosteruppercentcost {\n  display: inline-block;\n  text-indent: 15em;\n}\n#divboostsacrificecost {\n  display: inline-block;\n}\n#boostsac2 {\n  display: inline-block;\n}\n#boostsection {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 2.375em\n}\n#nbnb {\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#divbau {\n  display: inline-block\n}\n#divupgradeba {\n  display: inline-block;\n}\n#divtoggleba {\n  display: inline-block;\n  text-indent: 6em;\n}\n#bnbn {\n  display: flex;\n  flex: space-evenly;\n  flex-direction: row;\n  gap: 1.5em\n}\n#gboostdouble {\n  display: inline-block;\n}\n#alphamachinedouble {\n  display: inline-block;\n  text-indent: 7.4em;\n}\n.button {\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n  padding-top: 0.25em;\n  padding-bottom: 0.25em;\n  border-radius: 2px;\n  border: 1px solid black;\n  box-shadow: none;\n  font-weight: 500;\n  cursor: pointer;\n}\n.tabopener {\n  padding-left: 0.7em;\n  padding-right: 0.7em;\n  padding-top: 0.35em;\n  padding-bottom: 0.35em;\n  font-size: 18px;\n}\nbody {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n}\n* {text-align: center; font-family: 'Arial'}\n#boostsection {\n  display:flex;\n  justify-content: center;\n}\n#bangshow {\n  display:flex;\n  justify-content: center;\n}\n#bangcenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#mergecenteringfix {\n  display:flex;\n  justify-content: center;\n}\n#veryouterboost {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-right: 15px;\n  padding-bottom: 10px; \n  display:none; \n  border-radius: 10px\n}\n#nuclearshow {\n  display:none;\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#bangshow {\n  display:none; \n}\n#mergeshow {\n  display:none; \n}\n#nuclearalphashow {\n  display:none; \n}\n.withtheoutline {\n  border:0.2em solid #333333; \n  padding-left: 15px; \n  padding-bottom: 10px; \n  padding-right: 15px; \n  border-radius: 10px\n}\n#nextfeature {\n  font-size:larger;\n  padding-bottom:0.3em;\n}\n#autosaving {\n  display:inline-block;\n}\n#divspeedparticlecost {\n  display: inline-block;\n}\n#divmachinecost {\n  display: inline-block;\n  text-indent: 2em;\n}\n#experimentoggle {\n  display:inline-block;\n  text-indent: 1em;\n}\n#devtoggle {\n  display:inline-block;\n  text-indent: 10em;\n}\n#divmergespeedcost {\n  display:inline-block;\n}\n#divpermergecost {\n  display:inline-block;\n  text-indent: 3em;\n}\n.flexycentering {\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  gap: 3em;\n}\n#flexyreactor {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 1em;\n}\n.flexyreactorcosts {\n  display: flex;\n  gap: 9em;\n}\nhtml {background-color: black}")();
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -3648,7 +3648,9 @@ let player = {
     "unlocknpboost": { cost: D(2), timesBought: D(0) },
     "upgradenpboost": { cost: D(2), timesBought: D(0) },
     "reactorupmult": { cost: D(1500), timesBought: D(0) },
-    "reactoruptime": { cost: D(1250), timesBought: D(0) }
+    "reactoruptime": { cost: D(1250), timesBought: D(0) },
+    "unlocknapboost": { cost: D(15), timesBought: D(0) },
+    "upgradenapboost": { cost: D(15), timesBought: D(0) }
   },
   num: D(0),
   alphaNum: D(0),
@@ -3696,7 +3698,7 @@ let player = {
   }
 };
 let playerSettings = {
-  version: "b2.0.0.1",
+  version: "b2.0.1.0",
   eSetting: 4,
   autoSaveDelay: 50,
   autoSaveMode: 4,
@@ -3724,10 +3726,10 @@ function updateGame() {
   if (stage !== 2) {
     localStorage.removeItem(window.location.pathname + "settings");
     localStorage.removeItem(window.location.pathname);
-    playerSettings.version = "b2.0.0.1";
+    playerSettings.version = "b2.0.1.0";
     window.location.reload();
   }
-  playerSettings.version = "b2.0.0.1";
+  playerSettings.version = "b2.0.1.0";
 }
 function loadSettings() {
   if (localStorage.getItem(window.location.pathname + "settings") !== null) {
@@ -4004,6 +4006,18 @@ const upgrades = {
     scaleFunction: scaleReactorUpTime,
     costDiv: "divreactoruptimecost",
     currency: "betaNum"
+  }),
+  unlocknapboost: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(Infinity)),
+    costDiv: "divnapboostcost",
+    currency: "betaNum",
+    extra: NABExtra
+  }),
+  upgradenapboost: Upgrade({
+    scaleFunction: scaleMultiplier(D$1(4)),
+    costDiv: "divnapboostupcost",
+    currency: "betaNum",
+    extra: NABExtra
   })
 };
 function scaleMultiplier(multiplier) {
@@ -4083,7 +4097,13 @@ function NBExtra() {
   }
 }
 function NABExtra() {
-  getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatb(getUpgradeTimesBought("nuclearalphabuy"));
+  let nuclearAlphaParticles = getUpgradeTimesBought("nuclearalphabuy");
+  if (getUpgradeTimesBought("unlocknapboost").eq(1)) {
+    nuclearAlphaParticles = onBought(["nuclearalphabuy", "*", [D$1(1), "+", ["upgradenapboost", "+", D$1(1), "/", D$1(10)]]]);
+    getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatD(nuclearAlphaParticles, 1);
+  } else {
+    getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatb(getUpgradeTimesBought("nuclearalphabuy"));
+  }
 }
 function PCAExtra() {
   if (getUpgradeTimesBought("upgradepca").lte(4)) {
@@ -4176,6 +4196,7 @@ function nextFeatureHandler() {
 }
 
 loadSettings();
+load();
 const themes = [
   {
     textColor: "#EBEBEB",
@@ -4250,8 +4271,9 @@ const themes = [
 ];
 function themeExec() {
   const { textColor, bgColor, buttonColor, borderColor, themeName } = themes[playerSettings.themeNumber];
-  getEl("diventirebody").style = "color: " + textColor + "; font-family: 'Times New Roman'";
+  getEl("diventirebody").style = "color: " + textColor + "; font-family: 'Arial'";
   document.body.style.backgroundColor = bgColor;
+  document.querySelector("html").style.backgroundColor = bgColor;
   const className = document.getElementsByClassName("button");
   for (let i = 0; i < className.length; i++) {
     className[i].style.backgroundColor = buttonColor;
@@ -4266,6 +4288,7 @@ function themeExec() {
   }
   getEl("whattheme").textContent = "Theme: " + themeName;
 }
+themeExec();
 window.theme = function() {
   playerSettings.themeNumber = (playerSettings.themeNumber + 1) % themes.length;
   themeExec();
@@ -4357,13 +4380,21 @@ let nuclearParticles = getUpgradeTimesBought("nuclearbuy");
 if (getUpgradeTimesBought("unlocknpboost").eq(1)) {
   nuclearParticles = onBought(["nuclearbuy", "*", [D$1(1), "+", ["upgradenpboost", "+", D$1(1), "/", D$1(10)]]]);
 }
+let nuclearAlphaParticles = getUpgradeTimesBought("nuclearalphabuy");
+if (getUpgradeTimesBought("unlocknapboost").eq(1)) {
+  nuclearAlphaParticles = onBought(["nuclearalphabuy", "*", [D$1(1), "+", ["upgradenapboost", "+", D$1(1), "/", D$1(10)]]]);
+}
 function amountUpdate() {
   if (getUpgradeTimesBought("unlocknpboost").eq(1)) {
     getEl("divnp").textContent = "Nuclear Particles: " + formatD(nuclearParticles, 1);
   } else {
     getEl("divnp").textContent = "Nuclear Particles: " + formatb(getUpgradeTimesBought("nuclearbuy"));
   }
-  getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatb(getUpgradeTimesBought("nuclearalphabuy"));
+  if (getUpgradeTimesBought("unlocknapboost").eq(1)) {
+    getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatD(nuclearAlphaParticles, 1);
+  } else {
+    getEl("divnap").textContent = "Nuclear Alpha Particles: " + formatb(getUpgradeTimesBought("nuclearalphabuy"));
+  }
   getEl("chunkamount").textContent = "Particle Chunks: " + formatb(player.pChunks);
   getEl("groupamount").textContent = "Particle Chunks: " + formatb(player.aGroups);
   getEl("omegabasecost").textContent = "Cost: " + formatb(player.omegaBaseCost);
@@ -4411,7 +4442,6 @@ window.openTab = function(tab) {
   }
   getEl(tab).style.display = "block";
 };
-load();
 loadMisc();
 window.saveExport = function() {
   navigator.clipboard.writeText(save());
@@ -4617,6 +4647,15 @@ function fgbTestConst() {
       nuclearParticles = getUpgradeTimesBought("nuclearbuy");
       getEl("npboostshow").style.display = "none";
     }
+    if (getUpgradeTimesBought("unlocknapboost").eq(1)) {
+      nuclearAlphaParticles = onBought(["nuclearalphabuy", "*", [D$1(1), "+", ["upgradenapboost", "+", D$1(1), "/", D$1(10)]]]);
+      getEl("napboostshow").style.display = "block";
+      getEl("napboostunlockbutton").style.display = "none";
+      getEl("divnapboostcost").style.display = "none";
+    } else {
+      nuclearAlphaParticles = getUpgradeTimesBought("nuclearalphabuy");
+      getEl("napboostshow").style.display = "none";
+    }
     if (getUpgradeTimesBought("gen").eq(0)) {
       getEl("divgencost").textContent = "Cost: Free";
     } else {
@@ -4643,7 +4682,7 @@ function fgbTestConst() {
       getEl("abgbunlockbutton").style.display = "none";
     }
     player.bangTime = Math.ceil(300 / Math.pow(2, getUpgradeTimesBought("bangspeed").toNumber()));
-    const alphaGain = onBought("alphaacc", ["perbang", "+", D$1(1)], ["nuclearalphabuy", "+", D$1(1)], [D$1(2), "^", "alphamachinedouble"]).times(boostsacmult);
+    const alphaGain = onBought("alphaacc", ["perbang", "+", D$1(1)], [nuclearAlphaParticles, "+", D$1(1)], [D$1(2), "^", "alphamachinedouble"]).times(boostsacmult);
     player.mergeTime = Math.ceil(300 / Math.pow(2, getUpgradeTimesBought("mergespeed").toNumber()));
     const betaGain = onBought("betaacc", ["permerge", "+", D$1(1)]);
     if (player.bangTimeLeft === 0) {
@@ -4729,6 +4768,8 @@ function fgbTestConst() {
     }
     const freeNuclearParticles = nuclearParticles.minus(getUpgradeTimesBought("nuclearbuy"));
     getEl("npboosttext").textContent = `Your Nuclear Particles Boost is giving you ${formatD(freeNuclearParticles, 1)} free Nuclear Particles`;
+    const freeNuclearAlphaParticles = nuclearAlphaParticles.minus(getUpgradeTimesBought("nuclearalphabuy"));
+    getEl("napboosttext").textContent = `Your Nuclear Alpha Particles Boost is giving you ${formatD(freeNuclearAlphaParticles, 1)} free Nuclear Alpha Particles`;
     getEl("counter").textContent = formatb(player.num) + " particles";
     getEl("clickercounter").textContent = `You have ${formatb(player.clickerParticles)} Clicker Particles (${formatb(clickerParticleGain.times(10))}/s), which are making Manual Boost ${formatbSpecific(clickerParticleMult)}x stronger.`;
     getEl("alphacounter").textContent = formatb(player.alphaNum) + " Alpha particles";
@@ -4862,4 +4903,4 @@ window.reset = function() {
   localStorage.setItem(window.location.pathname + "backupsave", savefile);
   window.location.reload();
 };
-//# sourceMappingURL=index.ed1df6ef.js.map
+//# sourceMappingURL=index.3120e7c7.js.map
