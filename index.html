@@ -7,21 +7,21 @@
     <title>Particle Incremental</title>
 
 	
-    <script type="module" crossorigin src="/Particle-Incremental/assets/index-dbf948fc.js"></script>
-    <link rel="stylesheet" href="/Particle-Incremental/assets/index-f59c4ed3.css">
+    <script type="module" crossorigin src="/Particle-Incremental/assets/index-9c2ea2fc.js"></script>
+    <link rel="stylesheet" href="/Particle-Incremental/assets/index-eb328547.css">
   </head>
 
   <body>
-	<audio id="audio" autoplay loop>
+	<audio id="audio" loop>
 		<source src="/Particle-Incremental/assets/hikaru_miles-5245c140.mp3" type="audio/mpeg" />
 	</audio>
-    <div id="diventirebody" style="opacity: 0">
+    <div id="diventirebody" style="opacity: 0; width: 100%;">
 			<div id="nextfeature">Calculating feature progress...</div>
 			<span style="color: #64ed93" id="counter">0 particles</span>
 			<div id="particlespersecond">You are getting 0 particles/s</div>
 			<br>
 
-			<div id="tabopeners" style="background: linear-gradient(black, transparent); padding: 24px; border-radius: 16px; width: 1000px; margin:auto;">
+			<div id="tabopeners" style="background: linear-gradient(#f8f8f826, transparent); padding: 24px; border-radius: 16px; width: 75%; margin:auto;">
 				<button onclick="openTab('Base')" class="button tabopener" id="tabopenbase">Base</button>
 				<button onclick="openTab('Factory')" class="button tabopener" id="tabopenfactory">Factory</button>
 				<button onclick="openTab('Alpha')" class="button tabopener" id="tabopenalpha">Alpha</button>
@@ -52,7 +52,7 @@
 				<div id="divtenspeedcost" class="inline-block">Cost: unknown</div>
 				<br>
 				<br>
-				<div class="withtheoutline" id="veryouterboost">
+				<div class="withtheoutline" id="veryouterboost" style="width:65%;margin:auto;">
 					<h2 id="bigboosttext" style="display:none">Boost</h2>
 					<div id="boostsection" style="display:none">
 						<div id="manboostsection">
@@ -87,7 +87,7 @@
 				</div>
 				<br>
 				<br>
-				<div id="nbnb" style="display:flex">
+				<div id="nbnb" style="display:flex; width: 80%;margin:auto;">
 					<div id="nuclearshow" class="withtheoutline">
 						<h2>Nuclear boost</h2>
 						<button onclick="buyUpgrade('nuclearbuy')" class="button">Buy Nuclear Particle</button>
@@ -125,7 +125,7 @@
 				<br>
 			</div>
 
-			<div id="Factory" style="display:none">
+			<div id="Factory" style="display:none;width:65%;margin:auto;">
 				<br>
 				<div id="divclickerparticles" class="withtheoutline">
 					<br>
@@ -153,7 +153,7 @@
 				<div id="divperbangcost" class="inline-block">Cost: 4 Alpha</div>
 				<br>
 				<br>
-				<div id="bnbn">
+				<div id="bnbn" style="margin:auto;width:71.2%;">
 					<div id="pcabox" class="withtheoutline">
 						<h2>Base automation</h2>
 						<br>
@@ -196,7 +196,7 @@
 					<div id="nuclearalphareach"></div>
 				</div>
 				<br>
-				<div id="bpsection" class="withtheoutline">
+				<div id="bpsection" class="withtheoutline" style="width:69%;margin:auto;">
 					<h2>Booster particles</h2>
 					<div id="boostersmaintext">You are currently getting 0 booster particles per alpha particle per second, resulting in a +0% boost to base particle production</div>
 					<div id="bpamount">You have 0 booster particles</div>
@@ -220,7 +220,7 @@
 					</div>
 				</div>
 				<br>
-				<div id="mergeshow" class="withtheoutline">
+				<div id="mergeshow" class="withtheoutline" style="width:69%;margin:auto;">
 					<h2>Merge!</h2>
 					Using a beta accelerator, you can merge two alpha groups together to make beta particles
 					<br>
@@ -243,7 +243,7 @@
 				</div>
 			</div>
 
-			<div id="Beta" style="display: none">
+			<div id="Beta" style="display: none;margin:auto;">
 				<div id="betacounter">0 Beta particles</div>
 				<div id="betapb">You are getting 1 beta/merge</div>
 				<br>
@@ -267,7 +267,6 @@
 							<div id="abgbtext">Your alpha-based generator boost is multiplying your generators by 1x (cbrt(alpha)/100*1)</div>
 						</div>
 					</div>
-					<br>
 					<div id="npboostbox" class="withtheoutline">
 						<h2>Nuclear Particles boost</h2>
 						<button onclick="buyUpgrade('unlocknpboost')" class="button" id="npboostunlockbutton">Unlock Nuclear Particles boost</button>
@@ -580,8 +579,8 @@
 				<button onclick="theme()" class="button" style="margin-left: 4em;">Change Theme</button>
 				<button onclick="musicSwitch()" class="button" style="margin-left: 4em;">Toggle Music</button>
 				<br>
-				<div id="whattheme">Theme: Light</div>
-				<div id="musicState" style="margin-left: 4em;">Off</div>
+				<div id="whattheme" class="inline">Theme: Light</div>
+				<div id="musicState" style="margin-left: 4em;" class="inline">Off</div>
 				<br><br>
 				<button onclick="experimentalToggle()" class="button">Toggle Experimental Features</button>
 				<button onclick="devToggle()" class="button">Toggle Developer Features</button>
@@ -599,13 +598,12 @@
 				<button onclick="autosavesettings()" class="button blueb">Toggle Autosave, Autosave Speed</button>
 				<br>
 				<div id="autosaving" class="inline-block">On, Delay: 30s</div>
-				<!-- <br> -->
 				<h2 style="color: rgb(237, 100, 100);">Danger</h2>
 				<button onclick="reset()" class="button redb">Reset Save</button> <br><br>
 				<button onclick="loadbackup()" class="button redb">Load Backup <br><p style="text-align: left; font-size: small; opacity: .2; margin: 0;">(if one exists)</p></button>
 				<br><br>
 				Special thanks to: <br>
-				<a href="https://github.com/CosmicDevourer26">Cosmic47</a>
+				<a href="https://github.com/Cosmic47">Cosmic47</a>
 				for keeping me motivated, helping me come up with ideas, and more. <br>
 				<a href="https://github.com/typeholes">qhwood</a>
 				for improving my code and helping me code. <br>
@@ -614,11 +612,11 @@
 				<a href="https://github.com/jakub791">jakub791</a>
 				for doing a LOT of coding and code changes.
 				<br><br>
-				Version b2.2.0.0
+				Version b2.2.1.0
 				<br>
 				Changelog:
 				<br>
-				New gameplay added, slight UI tweaks, bugfixes, major code changes, balancing changes,<br> better support for older saves, music, saves now in base64, removed Herobrine.
+				UI changed, bugfixes, code changes, number notation changes.
 				<br><br><br><br>
 				Copyright notice: The in-game music "Hikaru - Miles" is non-copyright. For YouTubers: if anyone tries to copyright strike you for it, that strike is false.<br>
 				About Particle Incremental itself: you are free to make derivative works, but do not try to impersonate me or hide the fact that THIS is the original.
@@ -645,7 +643,7 @@
 				Buying more alpha accelerators multiplies alpha particle gain from the bangs by the total number of accelerators you have. <br> 
 			</div>
 
-			<div id="Dev" style="display:none">
+			<div id="Dev" style="display: none">
 				<br>
 				<div id="cheat">
 				    <button onclick="cheat()" class="button">cheat</button>
